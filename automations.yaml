@@ -85,7 +85,7 @@
 - id: '15410589874822'
   alias: tu Mở đèn Yeelight
   trigger:
-  - entity_id: device_tracker.luong_note_8
+  - entity_id: device_tracker.hostone
     from: not_home
     platform: state
     to: home
@@ -94,14 +94,13 @@
   - data:
       entity_id: light.bed_room
     service: light.turn_on
-    
 - id: '1542965147978'
   alias: AUTO START DUCK DNS
   trigger:
-    - event: start
-      platform: homeassistant
+  - event: start
+    platform: homeassistant
   action:
-     - wait_template: "{{ is_state('binary_sensor.ping_binary_sensor', 'on') }}"
-     - service: hassio.addon_start
-       data:
-         addon: "core_duckdns"
+  - wait_template: '{{ is_state(''binary_sensor.ping_binary_sensor'', ''on'') }}'
+  - service: hassio.addon_start
+    data:
+      addon: core_duckdns

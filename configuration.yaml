@@ -147,8 +147,8 @@ sensor:
       battery_iphone:
         unit_of_measurement: '%'
         value_template: >
-            {%- if states.device_tracker.iphonecuathai.attributes.battery %}
-                {{ states.device_tracker.iphonecuathai.attributes.battery|round }}
+            {%- if states.device_tracker.iphone_7.attributes.battery %}
+                {{ states.device_tracker.iphone_7.attributes.battery|round }}
             {% else %}
                 {{ states.sensor.battery_iphone.state }}
             {%- endif %}
@@ -381,8 +381,8 @@ device_tracker:
     account_name: accountname
   - platform: icloud2
     username: leluongnt@gmail.com
-    password: !Luong123456
-    account_name: !secret icloud_descriptive_name
+    password: Luong123456
+    account_name: icloud_descriptive_name
     filter_devices: 'phone'
 climate:
   - platform: broadlink
