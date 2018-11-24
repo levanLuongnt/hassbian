@@ -1,0 +1,10 @@
+'1537975028443':
+  alias: Mở tv hẹn giờ
+  sequence:
+  - data:
+      entity_id: switch.tv
+    service: switch.turn_on
+  - delay: 00:00:30
+  - data:
+      entity_id: switch.tv
+    service: switch.turn_off

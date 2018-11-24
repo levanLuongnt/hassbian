@@ -1,0 +1,21 @@
+alarm_hour:
+    name: Hour
+    icon: mdi:timer
+    initial: 9
+    min: 0
+    max: 23
+    step: 1
+alarm_minute:
+    name: Minutes
+    icon: mdi:timer
+    initial: 0
+    min: 0
+    max: 59
+    step: 1
+
+porch_animation_speed:
+    name: Porch Animation Speed
+    initial: 150
+    min: 1
+    max: 150
+    step: 10

@@ -1,0 +1,32 @@
+
+hostone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Lượng
+  picture:
+  track: true
+
+beacon_work:
+  hide_if_away: false
+  icon:
+  mac:
+  name: work
+  picture:
+  track: true
+
+luong_note_8:
+  hide_if_away: false
+  icon:
+  mac:
+  name: luong
+  picture:
+  track: true
+
+luong_0c2a836836c34e00aa031fe273bac44d:
+  hide_if_away: false
+  icon:
+  mac:
+  name: luong
+  picture:
+  track: true

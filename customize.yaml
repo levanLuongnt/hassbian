@@ -1,0 +1,11 @@
+light.yeelight_rgb_7c49eb1231a8:
+  friendly_name: Đèn yeelight
+device_tracker.hostone:
+  friendly_name: Note 8
+zone.luong_0c2a836836c34e00aa031fe273bac44d__homefda50693a4e24fb1afcfc6eb0764782510002000:
+  friendly_name: iBeacon
+  icon: mdi:import
+device_tracker.luong_0c2a836836c34e00aa031fe273bac44d:
+  friendly_name: luong ?
+device_tracker.luong_note_8:
+  friendly_name: luong ??
