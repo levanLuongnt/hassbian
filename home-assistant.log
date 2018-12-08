@@ -1,370 +1,218 @@
-2018-11-24 10:44:10 WARNING (MainThread) [homeassistant.components.http] legacy_api_password support has been enabled. If you don't require it, remove the 'api_password' from your http config.
-2018-11-24 10:44:14 WARNING (Recorder) [homeassistant.components.recorder] Ended unfinished session (id=169 from 2018-11-24 03:12:29.709927)
-2018-11-24 10:44:16 WARNING (MainThread) [homeassistant.loader] You are using a custom component for climate.broadlink which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
-2018-11-24 10:44:16 WARNING (MainThread) [homeassistant.loader] You are using a custom component for device_tracker.icloud2 which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
-2018-11-24 10:44:17 ERROR (MainThread) [custom_components.climate.broadlink] The ini file was not found. (/config/broadlink_fan_codes/living_room_fan.ini)
-2018-11-24 10:44:22 ERROR (MainThread) [homeassistant.components.sensor.yr] Retrying in 16 minutes: Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:None [Try again]
-2018-11-24 10:44:24 ERROR (SyncWorker_8) [homeassistant.components.device_tracker.icloud] Multiple devices with name: luongsiphone
-2018-11-24 10:44:24 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543031050, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 10:44:25 ERROR (SyncWorker_8) [homeassistant.components.device_tracker.icloud] Multiple devices with name: luongsiphone
-2018-11-24 10:44:26 WARNING (MainThread) [homeassistant.components.sensor.template] Could not render template battery_iphone, the state is unknown.
-2018-11-24 10:44:26 WARNING (MainThread) [homeassistant.components.sensor.template] Could not render template battery_iphone, the state is unknown.
-2018-11-24 10:44:26 WARNING (MainThread) [homeassistant.core] Unable to find service hassio/addon_start
-2018-11-24 10:46:22 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543031180, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 10:48:51 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543031310, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 10:51:02 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543031440, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 10:53:12 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543031570, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 10:55:02 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543031700, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 10:57:12 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543031830, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 10:59:22 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543031961, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 11:01:32 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543032091, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 11:03:53 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543032220, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 11:05:52 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543032350, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 11:11:48 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543032481, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 11:44:16 ERROR (MainThread) [homeassistant.components.updater] Got unexpected response: None
-2018-11-24 12:00:35 ERROR (MainThread) [homeassistant.components.sensor.yr] Retrying in 17 minutes: Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:None [Try again]
-2018-11-24 12:45:39 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 12:46:00 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 12:46:04 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 12:46:41 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 12:46:48 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543038200, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 12:46:48 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543038330, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 12:46:54 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 12:47:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 12:47:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 12:47:42 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543038460, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 12:47:43 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 12:47:56 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 12:48:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-11-24 12:48:14 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 12:48:27 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 12:48:45 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 12:48:59 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 12:49:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 12:49:30 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 12:49:47 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 12:50:01 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 12:50:15 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543038590, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 12:50:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 12:50:32 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 12:50:49 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 12:51:03 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 12:51:20 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 12:51:35 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 12:51:51 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 12:52:04 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543038720, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 12:52:06 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 12:52:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 12:52:37 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 12:52:42 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 12:53:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 12:53:38 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 12:53:44 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 12:54:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 12:54:34 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543038850, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 12:54:40 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 12:54:46 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 12:55:27 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 12:55:42 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 12:55:48 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 12:56:22 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543038980, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 12:56:29 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 12:56:44 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 12:56:50 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 12:57:31 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 12:57:46 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 12:57:52 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 12:58:33 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 12:58:34 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543039110, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 12:58:48 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 12:58:54 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 12:59:35 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 12:59:50 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 12:59:56 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:00:37 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:00:52 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:00:58 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:01:09 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543039240, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:01:39 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:01:54 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:02:00 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:02:41 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:02:52 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543039371, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:02:56 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:03:02 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:03:43 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:03:58 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:04:04 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:04:45 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:05:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:05:02 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543039500, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:05:06 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:05:47 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:06:02 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:06:08 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:06:49 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:07:04 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:07:10 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:07:17 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543039631, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:07:51 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:08:06 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:08:12 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:08:53 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:09:08 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:09:14 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:09:22 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543039760, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:09:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:10:10 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:10:16 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:10:57 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:11:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:11:18 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:11:32 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543039890, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:11:59 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:12:14 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:12:20 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:13:01 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:13:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:13:22 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:13:42 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543040020, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:14:03 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:14:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:14:23 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:15:04 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:15:19 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:15:25 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:15:52 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543040150, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:16:06 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:16:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:16:27 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:17:08 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:17:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:17:29 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:17:46 ERROR (MainThread) [homeassistant.components.sensor.yr] Retrying in 20 minutes: Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:None [Try again]
-2018-11-24 13:18:02 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543040280, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:18:10 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:18:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:18:31 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:19:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:19:27 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:19:33 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:20:12 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543040410, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:20:14 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:20:29 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:20:35 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:21:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:21:31 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:21:37 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:22:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:22:24 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543040542, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:22:33 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:22:39 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:23:20 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:23:35 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:23:41 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:24:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:24:32 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543040670, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:24:37 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:24:43 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:25:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:25:38 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:25:44 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:26:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:26:40 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:26:42 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543040800, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:26:46 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:27:27 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:27:42 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:27:48 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:28:29 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:28:44 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:28:50 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:28:52 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543040930, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:29:31 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:29:46 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:29:52 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:30:33 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:30:48 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:30:54 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:31:02 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543041060, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:31:35 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:31:50 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:31:56 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:32:37 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:32:52 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:32:58 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:33:13 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543041190, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:33:39 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:33:54 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:34:00 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:34:41 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:34:56 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:35:01 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:35:22 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543041320, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:35:42 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:35:57 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:36:02 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:36:43 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:36:58 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:37:04 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:37:43 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543041450, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:37:45 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:37:52 ERROR (MainThread) [homeassistant.components.sensor.yr] Retrying in 15 minutes: Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:None [Try again]
-2018-11-24 13:38:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:38:06 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:38:47 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:39:02 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:39:08 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:39:42 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543041580, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:39:49 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:40:04 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:40:10 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:40:51 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:41:06 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:41:12 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:41:52 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543041710, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:41:53 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:42:08 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:42:14 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:42:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:43:10 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:43:16 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:43:57 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:44:02 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543041840, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:44:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:44:18 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:44:58 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:45:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:45:19 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:46:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:46:12 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543041970, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:46:15 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:46:21 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:47:02 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:47:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:47:23 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:48:04 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:48:19 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:48:22 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543042100, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:48:25 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:49:06 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:49:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:49:27 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:50:08 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:50:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:50:29 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:50:32 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543042230, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:51:10 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:51:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:51:31 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:52:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:52:27 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:52:33 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:52:42 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543042360, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:52:58 ERROR (MainThread) [homeassistant.components.sensor.yr] Retrying in 18 minutes: Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:None [Try again]
-2018-11-24 13:53:14 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:53:29 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:53:35 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:54:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:54:31 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:54:36 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:54:52 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543042490, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:55:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:55:32 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:55:38 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:56:19 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:56:34 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:56:40 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:57:02 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543042620, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:57:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:57:36 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:57:42 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:58:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:58:38 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:58:44 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 13:58:52 ERROR (SyncWorker_9) [homeassistant.components.light.yeelight] Unable to turn the bulb on: A socket error occurred when sending the command.
-2018-11-24 13:59:12 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543042750, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 13:59:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 13:59:40 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 13:59:46 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:00:27 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:00:42 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:00:48 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:01:29 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:01:44 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:01:47 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543042880, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 14:01:50 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:02:31 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:02:46 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:02:52 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:03:32 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543043010, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 14:03:33 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:03:48 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:03:54 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:04:34 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:04:49 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:04:55 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:05:36 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:05:42 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543043140, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 14:05:51 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:05:57 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:06:37 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:06:52 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:06:58 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:07:39 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:07:52 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543043270, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 14:07:54 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:08:00 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:08:41 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:08:56 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:09:02 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:09:43 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:09:58 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:10:02 WARNING (MainThread) [homeassistant.components.device_tracker.owntracks] Ignoring transition update because GPS accuracy is zero: {'_type': 'transition', 'tid': ' 8', 'acc': 0.0, 'desc': '-home', 'event': 'leave', 'lat': 0.0, 'lon': 0.0, 'tst': 1543043400, 'wtst': 1542355850, 't': 'b', 'topic': 'owntracks/luong/note 8/event'}
-2018-11-24 14:10:03 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:10:44 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:10:59 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:11:04 ERROR (MainThread) [homeassistant.components.sensor.yr] Retrying in 15 minutes: Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:None [Try again]
-2018-11-24 14:11:05 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:11:46 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:12:01 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:12:06 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:12:47 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:13:02 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:13:08 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:13:49 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:14:04 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:14:10 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:14:51 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:15:06 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:15:12 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:15:53 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:16:08 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:16:14 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:16:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:17:10 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:17:16 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:17:57 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:18:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:18:18 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:18:59 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:19:14 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:19:20 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:20:01 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:20:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:20:22 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:21:03 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:21:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:21:24 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:22:04 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:22:19 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:22:25 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:23:06 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:23:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:23:27 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:24:08 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:24:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:24:29 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
-2018-11-24 14:25:10 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.flux_lamppost is taking over 10 seconds
-2018-11-24 14:25:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.led_tv is taking over 10 seconds
-2018-11-24 14:25:31 WARNING (MainThread) [homeassistant.components.light] Updating flux_led light took longer than the scheduled update interval 0:00:30
+2018-12-08 19:41:53 WARNING (MainThread) [homeassistant.components.http] legacy_api_password support has been enabled. If you don't require it, remove the 'api_password' from your http config.
+2018-12-08 19:41:57 WARNING (MainThread) [homeassistant.loader] You are using a custom component for device_tracker.icloud2 which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2018-12-08 19:41:58 WARNING (MainThread) [homeassistant.loader] You are using a custom component for climate.broadlink which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2018-12-08 19:41:58 WARNING (MainThread) [homeassistant.components.emulated_hue] Emulated Hue running in legacy mode because type has been specified. More info at https://goo.gl/M6tgz8
+2018-12-08 19:42:00 ERROR (SyncWorker_16) [pynetgear] Error talking to API
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/local/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x72ade330>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.1.1', port=5000): Max retries exceeded with url: /soap/server_sa/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72ade330>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/pynetgear/__init__.py", line 373, in _make_request
+    data=message, timeout=30, verify=False)
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.1.1', port=5000): Max retries exceeded with url: /soap/server_sa/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72ade330>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2018-12-08 19:42:00 ERROR (SyncWorker_16) [pynetgear] Error talking to API
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/local/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x705df7d0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.1.1', port=5000): Max retries exceeded with url: /soap/server_sa/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x705df7d0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/pynetgear/__init__.py", line 373, in _make_request
+    data=message, timeout=30, verify=False)
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.1.1', port=5000): Max retries exceeded with url: /soap/server_sa/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x705df7d0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2018-12-08 19:42:00 ERROR (SyncWorker_16) [pynetgear] Get attached devices failed
+2018-12-08 19:42:00 ERROR (SyncWorker_16) [homeassistant.components.device_tracker.netgear] Failed to Login
+2018-12-08 19:42:00 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity_platform.py", line 343, in _async_add_entity
+    raise HomeAssistantError(msg)
+homeassistant.exceptions.HomeAssistantError: Entity id already exists: cover.garage_door
+2018-12-08 19:42:00 ERROR (MainThread) [homeassistant.components.device_tracker] Error setting up platform netgear
+2018-12-08 19:42:03 ERROR (SyncWorker_19) [homeassistant.components.light.yeelight] Failed to connect to bulb 192.168.1.9, Bed Room: A socket error occurred when sending the command.
+2018-12-08 19:42:04 ERROR (MainThread) [homeassistant.components.sensor.yr] Retrying in 16 minutes: Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:None [Try again]
+2018-12-08 19:42:06 ERROR (SyncWorker_7) [homeassistant.components.device_tracker.icloud] Multiple devices with name: luongsiphone
+2018-12-08 19:42:07 ERROR (SyncWorker_7) [homeassistant.components.device_tracker.icloud] Multiple devices with name: luongsiphone
+2018-12-08 19:42:09 WARNING (SyncWorker_0) [homeassistant.components.light.flux_led] Failed to connect to bulb 192.168.1.20, led TV
+2018-12-08 19:42:09 WARNING (MainThread) [homeassistant.components.light] Setup of platform flux_led is taking over 10 seconds.
+2018-12-08 19:42:18 WARNING (SyncWorker_5) [homeassistant.components.light.flux_led] Failed to connect to bulb 192.168.1.20, flux_lamppost
+2018-12-08 19:42:19 WARNING (MainThread) [homeassistant.components.sensor.template] Could not render template battery_iphone, the state is unknown.
+2018-12-08 19:42:19 WARNING (MainThread) [homeassistant.components.sensor.template] Could not render template battery_iphone, the state is unknown.
+2018-12-08 19:42:19 WARNING (MainThread) [homeassistant.core] Unable to find service hassio/addon_restart
+2018-12-08 19:42:23 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 19:43:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 19:44:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 19:44:41 ERROR (MainThread) [homeassistant.core] Error executing service <ServiceCall configurator.configure (c:0ba487983952411dbb18d37f26f8e644): configure_id=1880559536-1, fields=trusted_device=348498>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/core.py", line 1177, in _event_to_service_call
+    await service_handler.func(service_call)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/configurator.py", line 221, in async_handle_service_call
+    call.data.get(ATTR_FIELDS, {}))
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/device_tracker/icloud.py", line 216, in icloud_trusted_device_callback
+    self._trusted_device = self.api.trusted_devices[self._trusted_device]
+IndexError: list index out of range
+2018-12-08 19:45:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 19:46:00 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 19:47:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 19:48:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 19:49:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 19:50:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 19:51:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 19:52:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 19:53:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 19:54:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 19:55:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 19:56:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 19:57:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 19:58:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 19:59:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:00:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:01:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:02:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:03:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:04:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:05:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:06:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:07:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:08:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:09:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:10:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:11:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:12:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:13:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:14:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:15:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:16:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:17:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:18:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:19:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:20:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:21:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:22:00 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:23:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:24:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:25:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:26:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:27:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:28:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:29:00 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:30:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:31:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:32:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:33:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:34:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:35:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:36:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:37:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:38:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:39:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:40:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:41:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:41:59 ERROR (MainThread) [homeassistant.components.updater] Got unexpected response: None
+2018-12-08 20:42:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:43:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 20:44:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
+2018-12-08 21:04:38 ERROR (SyncWorker_8) [homeassistant.components.sensor.darksky] Unable to connect to Dark Sky: HTTPSConnectionPool(host='api.darksky.net', port=443): Max retries exceeded with url: /forecast/1efb950e5fd25be6dc4e31fd08d9ef59/12.213666,109.183506?units=si&lang=en (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x75430c70>: Failed to establish a new connection: [Errno -3] Try again',))

@@ -22,3 +22,10 @@ luong_0c2a836836c34e00aa031fe273bac44d:
   name: IPhone
   picture:
   track: true
+beacon_work:
+  hide_if_away: false
+  icon:
+  mac:
+  name: work
+  picture:
+  track: true

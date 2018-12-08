@@ -1,0 +1,32 @@
+
+ # emulated_hue:
+  type: alexa
+  host_ip: 192.168.1.13
+  
+  expose_by_default: false
+  exposed_domains:
+    - switch
+    - input_boolean
+    - light
+    - cover
+    - automation
+    - cript
+  entities:
+    switch.quat_ngu_1:
+      hidden: false
+    switch.quat_ngu_on_3:
+      hidden: false
+    switch.tuoi_lan:
+      hidden: false
+    cover.rem_trong:
+      hidden: false
+    cover.rem_ngoai:
+      hidden: false
+    cover.sky_door_1:
+      hidden: false
+    light.bed_room:
+      hidden: false
+    # switch.bedroom_light:
+      # hidden: false
+    # switch.quat_ngu_on_3:
+      # hidden: false    
