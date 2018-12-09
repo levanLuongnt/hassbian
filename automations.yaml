@@ -104,3 +104,23 @@
   - data:
       addon: core_duckdns
     service: hassio.addon_restart
+- id: '1538324290723'
+  alias: Nhắc sạc pin iPhone
+  trigger:
+  - below: '20'
+    entity_id: sensor.battery_iphone
+    platform: numeric_state
+  condition:
+  - after: '6:00'
+    before: '22:00'
+    condition: time
+  action:
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.phong_rieng
+      volume_level: 0.9
+  - service: tts.google_say
+    entity_id: media_player.phong_rieng
+    data:
+      message: Cảnh báo, mức pin iPhone xuống dưới hai mươi phần trăm, hãy kết nối bộ sạc để không bị gián đoạn liên lạc
+      language: vi

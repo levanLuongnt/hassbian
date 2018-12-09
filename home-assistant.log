@@ -1,8 +1,8 @@
-2018-12-08 19:41:53 WARNING (MainThread) [homeassistant.components.http] legacy_api_password support has been enabled. If you don't require it, remove the 'api_password' from your http config.
-2018-12-08 19:41:57 WARNING (MainThread) [homeassistant.loader] You are using a custom component for device_tracker.icloud2 which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
-2018-12-08 19:41:58 WARNING (MainThread) [homeassistant.loader] You are using a custom component for climate.broadlink which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
-2018-12-08 19:41:58 WARNING (MainThread) [homeassistant.components.emulated_hue] Emulated Hue running in legacy mode because type has been specified. More info at https://goo.gl/M6tgz8
-2018-12-08 19:42:00 ERROR (SyncWorker_16) [pynetgear] Error talking to API
+2018-12-09 16:46:20 WARNING (MainThread) [homeassistant.components.http] legacy_api_password support has been enabled. If you don't require it, remove the 'api_password' from your http config.
+2018-12-09 16:46:24 WARNING (MainThread) [homeassistant.loader] You are using a custom component for climate.broadlink which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2018-12-09 16:46:24 WARNING (MainThread) [homeassistant.loader] You are using a custom component for device_tracker.icloud2 which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2018-12-09 16:46:25 WARNING (MainThread) [homeassistant.components.emulated_hue] Emulated Hue running in legacy mode because type has been specified. More info at https://goo.gl/M6tgz8
+2018-12-09 16:46:26 ERROR (SyncWorker_19) [pynetgear] Error talking to API
 Traceback (most recent call last):
   File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 159, in _new_conn
     (self._dns_host, self.port), self.timeout, **extra_kw)
@@ -33,7 +33,7 @@ Traceback (most recent call last):
     conn = self._new_conn()
   File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 168, in _new_conn
     self, "Failed to establish a new connection: %s" % e)
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x72ade330>: Failed to establish a new connection: [Errno 111] Connection refused
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x705dcd30>: Failed to establish a new connection: [Errno 111] Connection refused
 
 During handling of the above exception, another exception occurred:
 
@@ -44,7 +44,7 @@ Traceback (most recent call last):
     _stacktrace=sys.exc_info()[2])
   File "/usr/local/lib/python3.6/site-packages/urllib3/util/retry.py", line 398, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.1.1', port=5000): Max retries exceeded with url: /soap/server_sa/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72ade330>: Failed to establish a new connection: [Errno 111] Connection refused',))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.1.1', port=5000): Max retries exceeded with url: /soap/server_sa/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x705dcd30>: Failed to establish a new connection: [Errno 111] Connection refused',))
 
 During handling of the above exception, another exception occurred:
 
@@ -61,8 +61,8 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 516, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.1.1', port=5000): Max retries exceeded with url: /soap/server_sa/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72ade330>: Failed to establish a new connection: [Errno 111] Connection refused',))
-2018-12-08 19:42:00 ERROR (SyncWorker_16) [pynetgear] Error talking to API
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.1.1', port=5000): Max retries exceeded with url: /soap/server_sa/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x705dcd30>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2018-12-09 16:46:26 ERROR (SyncWorker_19) [pynetgear] Error talking to API
 Traceback (most recent call last):
   File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 159, in _new_conn
     (self._dns_host, self.port), self.timeout, **extra_kw)
@@ -93,7 +93,7 @@ Traceback (most recent call last):
     conn = self._new_conn()
   File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 168, in _new_conn
     self, "Failed to establish a new connection: %s" % e)
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x705df7d0>: Failed to establish a new connection: [Errno 111] Connection refused
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x705aac70>: Failed to establish a new connection: [Errno 111] Connection refused
 
 During handling of the above exception, another exception occurred:
 
@@ -104,7 +104,7 @@ Traceback (most recent call last):
     _stacktrace=sys.exc_info()[2])
   File "/usr/local/lib/python3.6/site-packages/urllib3/util/retry.py", line 398, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.1.1', port=5000): Max retries exceeded with url: /soap/server_sa/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x705df7d0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.1.1', port=5000): Max retries exceeded with url: /soap/server_sa/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x705aac70>: Failed to establish a new connection: [Errno 111] Connection refused',))
 
 During handling of the above exception, another exception occurred:
 
@@ -121,98 +121,32 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 516, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.1.1', port=5000): Max retries exceeded with url: /soap/server_sa/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x705df7d0>: Failed to establish a new connection: [Errno 111] Connection refused',))
-2018-12-08 19:42:00 ERROR (SyncWorker_16) [pynetgear] Get attached devices failed
-2018-12-08 19:42:00 ERROR (SyncWorker_16) [homeassistant.components.device_tracker.netgear] Failed to Login
-2018-12-08 19:42:00 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.1.1', port=5000): Max retries exceeded with url: /soap/server_sa/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x705aac70>: Failed to establish a new connection: [Errno 111] Connection refused',))
+2018-12-09 16:46:26 ERROR (SyncWorker_19) [pynetgear] Get attached devices failed
+2018-12-09 16:46:27 ERROR (SyncWorker_19) [homeassistant.components.device_tracker.netgear] Failed to Login
+2018-12-09 16:46:27 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
 Traceback (most recent call last):
   File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity_platform.py", line 343, in _async_add_entity
     raise HomeAssistantError(msg)
 homeassistant.exceptions.HomeAssistantError: Entity id already exists: cover.garage_door
-2018-12-08 19:42:00 ERROR (MainThread) [homeassistant.components.device_tracker] Error setting up platform netgear
-2018-12-08 19:42:03 ERROR (SyncWorker_19) [homeassistant.components.light.yeelight] Failed to connect to bulb 192.168.1.9, Bed Room: A socket error occurred when sending the command.
-2018-12-08 19:42:04 ERROR (MainThread) [homeassistant.components.sensor.yr] Retrying in 16 minutes: Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:None [Try again]
-2018-12-08 19:42:06 ERROR (SyncWorker_7) [homeassistant.components.device_tracker.icloud] Multiple devices with name: luongsiphone
-2018-12-08 19:42:07 ERROR (SyncWorker_7) [homeassistant.components.device_tracker.icloud] Multiple devices with name: luongsiphone
-2018-12-08 19:42:09 WARNING (SyncWorker_0) [homeassistant.components.light.flux_led] Failed to connect to bulb 192.168.1.20, led TV
-2018-12-08 19:42:09 WARNING (MainThread) [homeassistant.components.light] Setup of platform flux_led is taking over 10 seconds.
-2018-12-08 19:42:18 WARNING (SyncWorker_5) [homeassistant.components.light.flux_led] Failed to connect to bulb 192.168.1.20, flux_lamppost
-2018-12-08 19:42:19 WARNING (MainThread) [homeassistant.components.sensor.template] Could not render template battery_iphone, the state is unknown.
-2018-12-08 19:42:19 WARNING (MainThread) [homeassistant.components.sensor.template] Could not render template battery_iphone, the state is unknown.
-2018-12-08 19:42:19 WARNING (MainThread) [homeassistant.core] Unable to find service hassio/addon_restart
-2018-12-08 19:42:23 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 19:43:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 19:44:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 19:44:41 ERROR (MainThread) [homeassistant.core] Error executing service <ServiceCall configurator.configure (c:0ba487983952411dbb18d37f26f8e644): configure_id=1880559536-1, fields=trusted_device=348498>
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.6/site-packages/homeassistant/core.py", line 1177, in _event_to_service_call
-    await service_handler.func(service_call)
-  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/configurator.py", line 221, in async_handle_service_call
-    call.data.get(ATTR_FIELDS, {}))
-  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/device_tracker/icloud.py", line 216, in icloud_trusted_device_callback
-    self._trusted_device = self.api.trusted_devices[self._trusted_device]
-IndexError: list index out of range
-2018-12-08 19:45:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 19:46:00 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 19:47:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 19:48:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 19:49:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 19:50:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 19:51:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 19:52:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 19:53:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 19:54:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 19:55:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 19:56:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 19:57:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 19:58:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 19:59:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:00:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:01:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:02:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:03:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:04:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:05:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:06:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:07:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:08:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:09:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:10:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:11:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:12:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:13:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:14:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:15:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:16:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:17:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:18:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:19:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:20:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:21:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:22:00 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:23:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:24:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:25:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:26:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:27:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:28:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:29:00 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:30:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:31:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:32:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:33:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:34:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:35:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:36:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:37:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:38:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:39:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:40:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:41:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:41:59 ERROR (MainThread) [homeassistant.components.updater] Got unexpected response: None
-2018-12-08 20:42:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:43:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 20:44:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'attributes'
-2018-12-08 21:04:38 ERROR (SyncWorker_8) [homeassistant.components.sensor.darksky] Unable to connect to Dark Sky: HTTPSConnectionPool(host='api.darksky.net', port=443): Max retries exceeded with url: /forecast/1efb950e5fd25be6dc4e31fd08d9ef59/12.213666,109.183506?units=si&lang=en (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x75430c70>: Failed to establish a new connection: [Errno -3] Try again',))
+2018-12-09 16:46:27 ERROR (MainThread) [homeassistant.components.device_tracker] Error setting up platform netgear
+2018-12-09 16:46:30 ERROR (SyncWorker_15) [homeassistant.components.light.yeelight] Failed to connect to bulb 192.168.1.9, Bed Room: A socket error occurred when sending the command.
+2018-12-09 16:46:31 ERROR (MainThread) [homeassistant.components.sensor.yr] Retrying in 16 minutes: Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:None [Try again]
+2018-12-09 16:46:34 ERROR (SyncWorker_17) [homeassistant.components.device_tracker.icloud] Multiple devices with name: luongsiphone
+2018-12-09 16:46:34 ERROR (SyncWorker_17) [homeassistant.components.device_tracker.icloud] Multiple devices with name: luongsiphone
+2018-12-09 16:46:36 WARNING (SyncWorker_1) [homeassistant.components.light.flux_led] Failed to connect to bulb 192.168.1.20, led TV
+2018-12-09 16:46:36 WARNING (MainThread) [homeassistant.components.light] Setup of platform flux_led is taking over 10 seconds.
+2018-12-09 16:46:45 WARNING (SyncWorker_14) [homeassistant.components.light.flux_led] Failed to connect to bulb 192.168.1.20, flux_lamppost
+2018-12-09 16:46:45 WARNING (MainThread) [homeassistant.core] Unable to find service hassio/addon_restart
+2018-12-09 16:50:50 WARNING (MainThread) [homeassistant.core] Unable to find service media_player/volume_set
+2018-12-09 16:50:54 WARNING (MainThread) [homeassistant.core] Unable to find service media_player/volume_set
+2018-12-09 16:50:55 WARNING (MainThread) [homeassistant.core] Unable to find service media_player/volume_set
+2018-12-09 16:50:56 WARNING (MainThread) [homeassistant.core] Unable to find service media_player/volume_set
+2018-12-09 16:50:56 WARNING (MainThread) [homeassistant.core] Unable to find service media_player/volume_set
+2018-12-09 16:51:02 WARNING (MainThread) [homeassistant.core] Unable to find service media_player/play_media
+2018-12-09 16:51:04 WARNING (MainThread) [homeassistant.core] Unable to find service media_player/play_media
+2018-12-09 16:51:05 WARNING (MainThread) [homeassistant.core] Unable to find service media_player/play_media
+2018-12-09 16:51:06 WARNING (MainThread) [homeassistant.core] Unable to find service media_player/play_media
+2018-12-09 16:51:06 WARNING (MainThread) [homeassistant.core] Unable to find service media_player/play_media
+2018-12-09 16:51:09 WARNING (MainThread) [homeassistant.core] Unable to find service media_player/volume_set
+2018-12-09 16:51:19 WARNING (MainThread) [homeassistant.core] Unable to find service media_player/play_media

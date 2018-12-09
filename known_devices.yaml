@@ -29,3 +29,10 @@ beacon_work:
   name: work
   picture:
   track: true
+iphone7:
+  hide_if_away: false
+  icon:
+  mac:
+  name: iPhone7
+  picture:
+  track: true
