@@ -5,17 +5,17 @@
   action:
   - alias: ''
     data:
-      entity_id: switch.tv
+      entity_id: switch.ti_vi
     service: switch.turn_on
   - delay: 00:60:00
   - data:
-      entity_id: switch.tv
+      entity_id: switch.ti_vi
     service: switch.turn_off
 - alias: TV Timer
   trigger:
-    platform: time
+    platform: time_pattern
     minutes: /1
-    seconds: 0
+    seconds: '0'
   condition:
     condition: and
     conditions:
@@ -45,18 +45,18 @@
   condition: []
   action:
   - data:
-      entity_id: switch.tv
+      entity_id: switch.ti_vi
     service: switch.turn_on
   - delay: 00:30:00
   - data:
-      entity_id: switch.tv
+      entity_id: switch.ti_vi
     service: switch.turn_off
 - id: '1541058987482'
   alias: on...........
   trigger:
   - platform: template
     value_template: '{{ (states.input_datetime.heating_on_weekday.attributes.timestamp
-      | int | timestamp_custom("%H:%M", False)) == states.sensor.time.state }}'
+      | int | timestamp_custom("%H:%M", False)) == states.sensor.timer.state }}'
   condition:
   - condition: time
     weekday:
@@ -117,10 +117,245 @@
   action:
   - service: media_player.volume_set
     data:
-      entity_id: media_player.phong_rieng
+      entity_id: media_player.google_home_mini
       volume_level: 0.9
   - service: tts.google_say
-    entity_id: media_player.phong_rieng
+    entity_id: media_player.google_home_mini
     data:
-      message: Cảnh báo, mức pin iPhone xuống dưới hai mươi phần trăm, hãy kết nối bộ sạc để không bị gián đoạn liên lạc
+      message: Cảnh báo, mức pin iPhone xuống dưới hai mươi phần trăm, hãy kết nối
+        bộ sạc để không bị gián đoạn liên lạc
       language: vi
+- alias: Fan power off
+  trigger:
+    platform: state
+    entity_id: input_boolean.fan_power
+    to: 'off'
+  action:
+  - service: switch.turn_off
+    entity_id: switch.power_of_fan
+  id: 69b4277e56a148b5b9a2b2d703aa8465
+- alias: Fan power on
+  trigger:
+    platform: state
+    entity_id: input_boolean.fan_power
+    to: 'on'
+  action:
+    service: script.turn_on
+    entity_id: script.change_fan_mode
+  id: 9e0134e6461d4f5296c4906409479d7e
+- alias: Fan change speed
+  trigger:
+    platform: state
+    entity_id: input_number.fan_speed
+  condition:
+    condition: state
+    entity_id: input_boolean.fan_power
+    state: 'on'
+  action:
+    service: script.turn_on
+    entity_id: script.change_fan_mode
+  id: fba75f2ed34446ef82bb5c163d40c076
+- alias: Fan change natural
+  trigger:
+    platform: state
+    entity_id: input_boolean.fan_natural
+  condition:
+    condition: state
+    entity_id: input_boolean.fan_power
+    state: 'on'
+  action:
+    service: script.turn_on
+    entity_id: script.change_fan_mode
+  id: 773e1a0dbc7841c2883fb919b1086a4a
+- id: '1541066521506'
+  alias: 'Push/update notification '
+  trigger:
+  - entity_id: sensor.cambiencua_xiaomi
+    from: 'off'
+    platform: state
+    to: 'on'
+  action:
+  - data: {}
+    data_template:
+      message: Last known sensor state is {{ states('sensor.sensor') }}.
+    service: notify.notifier_name
+- id: '1545164377966'
+  alias: Notify TẮT TV
+  trigger:
+  - entity_id: switch.ti_vi
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data: {}
+    data_template:
+      message: Vừa tắt TV
+    service: notify.notifier_name
+- id: '154516437796606'
+  alias: Notify MỞ TV
+  trigger:
+  - entity_id: switch.ti_vi
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data: {}
+    data_template:
+      message: Vừa mở TV
+    service: notify.notifier_name
+  - data: {}
+    service: notify.android
+- id: '1545151222385'
+  alias: nói tiếng việt
+  trigger:
+  - entity_id: switch.quat_ngu_on_3
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data:
+      language: vi
+      message: Cảnh báo, mức pin iPhone xuống dưới hai mươi phần trăm, hãy kết nối
+        bộ sạc để không bị gián đoạn liên lạc
+    entity_id: media_player.google_home_mini
+    service: tts.google_say
+- id: '1545151222380'
+  alias: Ví dụ đọc văn bản tiếng Việt
+  trigger:
+  - entity_id: switch.quat_ngu_on_3
+    platform: state
+    to: 'on'
+  action:
+  - data:
+      language: vi
+      message: Quạt ngủ vừa được bật số 3
+    entity_id: media_player.google_home_mini
+    service: tts.google_say
+- alias: Timer fan countdown
+  trigger:
+    platform: time_pattern
+    minutes: /10
+    seconds: 0
+  condition:
+    condition: numeric_state
+    entity_id: input_number.fan_timer
+    above: '0'
+  action:
+    service: input_number.decrement
+    data:
+      entity_id: input_number.fan_timer
+  id: 78068ad16be0404885c4762d3efccf52
+- alias: Time to Control On
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: time_pattern
+    minutes: /1
+    seconds: '0'
+  condition:
+  - condition: state
+    entity_id: input_boolean.switch_1_timer_input
+    state: 'on'
+  - condition: template
+    value_template: '{{ now().strftime("%H:%M") == states.sensor.timer.state }}'
+  action:
+  - service: switch.turn_on
+    data_template:
+      entity_id: "{% if   is_state('input_select.switch_2_timer_select', ' TV') %}\n\
+        \  switch.ti_vi\n{% elif is_state('input_select.switch_2_timer_select', 'Quạt\
+        \ phòng ngủ') %}\n  switch.quat\n{% elif is_state('input_select.switch_2_timer_select',\
+        \ 'switch.Null') %}\n  switch.null\n    {% endif %}\n"
+  - service: tts.google_say
+    data_template:
+      entity_id: media_player.google_home_mini
+      message: '{{ states.input_select.switch_2_timer_select.state }} đã được bật
+        tự động'
+  id: c19cee6f37694673986d5b114a3a7298
+- alias: Time to Control Off
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: time_pattern
+    minutes: /1
+    seconds: '0'
+  condition:
+  - condition: state
+    entity_id: input_boolean.switch_1_timer_input
+    state: 'off'
+  - condition: template
+    value_template: '{{ now().strftime("%H:%M") == states.sensor.timer.state }}'
+  action:
+  - service: switch.turn_off
+    data_template:
+      entity_id: "{% if   is_state('input_select.switch_2_timer_select', ' TV') %}\n\
+        \  switch.ti_vi\n{% elif is_state('input_select.switch_2_timer_select', 'Quạt\
+        \ phòng ngủ') %}\n  switch.quat\n{% elif is_state('input_select.switch_2_timer_select',\
+        \ 'switch.Null') %}\n  switch.null\n    {% endif %}\n"
+  - service: tts.google_say
+    data_template:
+      entity_id: media_player.google_home_mini
+      message: '{{ states.input_select.switch_2_timer_select.state }} đã được tắt
+        tự động'
+  id: ebe532d1d74f44d795c84e83f6118500
+- alias: ẩn nhóm sensor
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: sun
+    event: sunrise
+  action:
+  - service: group.set_visibility
+    entity_id: group.sensor
+    data:
+      visible: true
+  id: 7f30eb3c53534a3dac124852be853e34
+- id: '1548423439860'
+  alias: Tưới cây sân thượng(độ ẩm)
+  trigger:
+  - above: '20'
+    below: '50'
+    entity_id: sensor.humi_soy
+    platform: numeric_state
+  condition: []
+  action:
+  - data:
+      entity_id: switch.tuoi_cay
+    service: switch.turn_on
+  - data:
+      message: Độ ẩm đất thấp, tưới cây sân thượng!
+    service: notify.notifier_name
+- id: '15488423439860'
+  alias: Tắt tưới cây sân thượng(độ ẩm)
+  trigger:
+  - above: '98'
+    entity_id: sensor.humi_soy
+    platform: numeric_state
+  condition: []
+  action:
+  - data:
+      entity_id: switch.tuoi_cay
+    service: switch.turn_off
+  - data:
+      message: Độ ẩm đất đã đủ, tắt tưới cây sân thượng!
+    service: notify.notifier_name
+- id: '15410589871488'
+  alias: Tưới cây sân thượng (tg)
+  trigger:
+  - at: 07:16:00
+    platform: time
+  condition: []
+  action:
+  - data:
+      entity_id: switch.tuoi_cay
+    service: switch.turn_on
+  - delay: 00:03:00
+  - data:
+      entity_id: switch.tuoi_cay
+    service: switch.turn_off
+  - data: {}
+    data_template:
+      message: Đang tưới cây sân thượng.
+    service: notify.notifier_name

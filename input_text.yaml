@@ -1,0 +1,13 @@
+text1:
+    name: Text 1
+    initial: Some Text
+text2:
+    name: Text 2
+    min: 8
+    max: 40
+text3:
+    name: Text 3
+    pattern: '[a-fA-F0-9]*'
+text4:
+    name: Text 4
+    mode: password

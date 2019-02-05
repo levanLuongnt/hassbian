@@ -1,0 +1,339 @@
+# Tab Home    
+# Tab Living Room
+#==============================###=========================================
+#Home
+
+default_view:
+    name: HOME
+    view: yes
+    icon: mdi:home
+    entities:
+      - sensor.date
+      - sensor.mattroi
+      - sensor.cambiencua_xiaomi
+      - binary_sensor.door_window_sensor_158d0002b5b494
+      - binary_sensor.door_window_sensor_158d0002b5b57d
+      - group.all_switches
+      - group.all_lights
+      - group.all_fans
+      - group.fan
+      - group.livingroom
+      - group.bedgroom
+      - group.kitchenroomroom
+      - group.uptrains
+########################################$$$$#################################
+automotion:
+  name: tự động và kịch bản
+  view: yes
+  icon: mdi:gauge
+  entities:
+  - group.all_automations
+  - group.all_scripts
+  - group.autohome
+  - input_text.text1
+  - input_text.text2
+  - input_text.text3
+  - input_text.text4
+#########################################$$$#################################
+Prameter_indoor2:
+    name: Thông số trong nhà
+    view: yes
+    icon: mdi:white-balance-sunny
+    entities:
+      - group.Prameter_electricity
+      - group.Prameter_indoor
+      - group.mobile
+#########################################$$$#################################
+weather_view:
+  name: Thời tiết
+  view: yes
+  icon: mdi:white-balance-sunny
+  entities:
+    - group.wunderground
+    - weather.dark_sky
+    - sensor.dark_sky_summary_tmpl
+    - sensor.forecast_0
+    - sensor.forecast_1
+    - sensor.forecast_2
+    - sensor.forecast_3
+    - sensor.forecast_4
+    - sensor.forecast_5
+    - sensor.forecast_6
+    - sensor.forecast_7
+    - group.previsioni_darksky
+    - group.weather_view
+    - group.meteo_darksky
+#########################################$$$################################# 
+sensor_view:
+  name: Sensors
+  view: yes
+  icon: mdi:gauge
+  entities:
+  - group.sensor
+#########################################$$$#################################   
+
+  #######################################$$$################################
+livingroom:
+    name: Phòng Khách
+    control: hidden
+    entities:
+      - switch.phong_khach_1
+      - switch.phong_khach_2
+      - switch.phong_khach_3
+      - switch.ti_vi
+      - switch.ti_vi_chua_dung
+      - switch.led_tv
+      - switch.chuyen_doi_led_tv
+      - light.porch_strip
+      - input_number.porch_animation_speed
+      - switch.original_xiaomi_mi_smart_wifi_socket
+      - media_player.google_home_mini
+      - media_player.living_room_tv
+      - switch.san_1
+      - switch.san_2
+      - switch.san_3
+########################################$$$$#################################
+kitchenroomroom:
+    name: Phòng bếp
+    control: hidden
+    entities:
+      - switch.bep_1
+      - switch.bep_2
+      - switch.bep_3
+      - group.livingroom_fan
+      - input_boolean.fan_power
+      - input_number.fan_speed
+      - input_boolean.fan_natural
+      - input_number.fan_timer
+      - input_boolean.fan_sleep
+      - switch.sonoff_1000424f20_1
+      - switch.sonoff_1000424f20_2
+      - switch.sonoff_1000424f20_3
+      - switch.sonoff_1000424f20_4
+########################################$$$$#################################
+bedgroom:
+    name: Phòng Ngủ
+    control: hidden
+    entities:
+      - cover.rem_trong
+      - cover.rem_ngoai
+      - fan.bedroom_fan
+      - light.bed_room
+      - light.gateway_light_7c49ebb1b4c9
+      - light.yeelight_rgb_7c49eb1231a8
+      - media_player.my_echo
+      - switch.quat_ngu_1
+      - switch.quat_ngu_on_3
+      - switch.phong_ngu_1
+      - switch.phong_ngu_2
+      - switch.phong_ngu_3
+      - climate.may_lanh_panasonic
+########################################$$$$#################################
+# homeyard:
+    # name: Sân trước
+    # control: hidden
+    # entities:
+      # - switch.san_1
+      # - switch.san_2
+      # - switch.san_3
+
+uptrains:
+    name: Sân Thượng
+    control: hidden
+    entities:
+      #- binary_sensor.door_window_sensor_158d0002b5b57d
+      - cover.gieng_troi_phai
+      - cover.gieng_troi_trai
+      - sensor.humi_soy
+      - switch.cam_bien_mua
+      - switch.tuoi_cay
+      - switch.may_bom
+      - switch.san_thuong_4
+      - switch.san_thuong_5
+      - switch.san_thuong_6
+
+      #####################################
+autohome:
+    name: Tùy chỉnh thiết bị tự động
+    entities:
+      - input_boolean.switch_1_timer_input 
+      - sensor.timer
+      - input_number.alarm_1_hour
+      - input_number.alarm_1_minutes
+      - input_select.switch_2_timer_select
+      - input_select.pcoptions
+      ######################################
+# livingroom_fan:
+    # name: Ceiling fan
+    # control: hidden
+    # entities:
+        # - input_boolean.fan_power
+        # - input_number.fan_speed
+        # - input_boolean.fan_natural
+        # - input_number.fan_timer
+        # - input_boolean.fan_sleep
+        ####################################
+Prameter_electricity:
+    name: Thông số điện
+    control: hidden
+    entities:
+        - sensor.dien_ap
+        - sensor.cuong_do_dong_dien
+        - sensor.he_so_cong_suat
+        - sensor.cong_suat_dang_tai
+        - sensor.luong_dien_tieu_thu_trong_ngay
+        - sensor.luong_dien_tieu_thu_hom_qua
+        - sensor.luong_dien_tieu_thu_thang_truoc
+        - sensor.tong_luong_dien_tieu_thu
+        - sensor.cong_suat_bieu_kien
+        - sensor.cong_suat_phan_khang
+        ######################################
+Prameter_indoor:
+    name: Thông số trong nhà
+    control: hidden
+    entities:
+        - sensor.cambienanhsang_xiaomi
+        - sensor.cambiendoam_xiaomi
+        - sensor.cambiennhietdo_xiaomi
+        - sensor.cpu_temperature
+        - sensor.pin_cambiencua_xiaomi
+        - sensor.pin_cambiencua_sanphoi
+        - sensor.pin_cambiennhietam_xiaomi
+        - sensor.tele_humidity
+        - sensor.temp
+        - sensor.temperature_158d000223fca2
+        - sensor.nhiet_do_phong_khach
+        - sensor.do_am_phong_khach
+        - sensor.illumination_7c49ebb1b4c9
+        - sensor.humidity_158d000223fca2
+        - sensor.humi_soy
+        - sensor.cambiennguoi_xiaomi
+        #####################################
+mobile:
+    name: Thiết bị di động
+    control: hidden
+    entities:
+        - sensor.battery_iphone
+        - sensor.battery_iphone_7
+        - sensor.battery_note_8
+        - binary_sensor.switch_158d0000ee410f
+        - binary_sensor.switch_158d00026b87e3
+        - binary_sensor.switch
+        #####################################
+sensor:
+    name: CẢM BIẾN
+    entities:
+        - binary_sensor.door_window_sensor_158d0002b5b494
+        - binary_sensor.ping_binary_sensor
+        - binary_sensor.ping_binary_sensor_2
+        - sensor.yr_symbol
+        - sensor.forecast_0
+        - sensor.weathertoday
+        - sensor.dark_sky_apparent_temperature
+        - sensor.dark_sky_apparent_temperature_2
+        - sensor.dark_sky_daily_summary
+        - sensor.dark_sky_daytime_high_temperature_1
+        - sensor.dark_sky_daytime_high_temperature_2
+        - sensor.dark_sky_daytime_high_temperature_3
+        - sensor.dark_sky_daytime_high_temperature_4
+        - sensor.dark_sky_daytime_high_temperature_5
+        - sensor.dark_sky_daytime_high_temperature_6
+        - sensor.dark_sky_daytime_high_temperature_7
+        - sensor.dark_sky_hourly_summary
+        - sensor.dark_sky_hourly_summary_tmpl
+        - sensor.dark_sky_humidity
+        - sensor.dark_sky_humidity_1
+        - sensor.dark_sky_humidity_2
+        - sensor.dark_sky_humidity_2_2
+        - sensor.dark_sky_humidity_3
+        - sensor.dark_sky_humidity_4
+        - sensor.dark_sky_humidity_5
+        - sensor.dark_sky_humidity_6
+        - sensor.dark_sky_humidity_6_2
+        - sensor.dark_sky_humidity_7_2
+        - sensor.dark_sky_humidity_8
+        - sensor.dark_sky_icon
+        - sensor.dark_sky_icon_1
+        - sensor.dark_sky_icon_2
+        - sensor.dark_sky_icon_2_2
+        - sensor.dark_sky_icon_3
+        - sensor.dark_sky_icon_4
+        - sensor.dark_sky_icon_5
+        - sensor.dark_sky_icon_6
+        - sensor.dark_sky_icon_7
+        - sensor.dark_sky_icon_8
+        - sensor.dark_sky_nearest_storm_distance
+        - sensor.dark_sky_overnight_low_temperature_1
+        - sensor.dark_sky_overnight_low_temperature_2
+        - sensor.dark_sky_overnight_low_temperature_3
+        - sensor.dark_sky_overnight_low_temperature_4
+        - sensor.dark_sky_overnight_low_temperature_5
+        - sensor.dark_sky_overnight_low_temperature_6
+        - sensor.dark_sky_overnight_low_temperature_7
+        - sensor.dark_sky_precip_intensity
+        - sensor.dark_sky_precip_intensity_1
+        - sensor.dark_sky_precip_intensity_2
+        - sensor.dark_sky_precip_intensity_3
+        - sensor.dark_sky_precip_intensity_4
+        - sensor.dark_sky_precip_intensity_5
+        - sensor.dark_sky_precip_intensity_6
+        - sensor.dark_sky_precip_intensity_7
+        - sensor.dark_sky_precip_probability
+        - sensor.dark_sky_precip_probability_1
+        - sensor.dark_sky_precip_probability_2
+        - sensor.dark_sky_precip_probability_3
+        - sensor.dark_sky_precip_probability_4
+        - sensor.dark_sky_precip_probability_5
+        - sensor.dark_sky_precip_probability_6
+        - sensor.dark_sky_precip_probability_7
+        - sensor.dark_sky_precip_probability_8
+        - sensor.dark_sky_pressure
+        - sensor.dark_sky_pressure_1
+        - sensor.dark_sky_pressure_2
+        - sensor.dark_sky_pressure_2_2
+        - sensor.dark_sky_pressure_3
+        - sensor.dark_sky_pressure_4
+        - sensor.dark_sky_pressure_5
+        - sensor.dark_sky_pressure_6
+        - sensor.dark_sky_pressure_7
+        - sensor.dark_sky_pressure_8
+        - sensor.dark_sky_summary
+        - sensor.dark_sky_summary_1
+        - sensor.dark_sky_summary_2
+        - sensor.dark_sky_summary_2_2
+        - sensor.dark_sky_summary_3
+        - sensor.dark_sky_summary_4
+        - sensor.dark_sky_summary_5
+        - sensor.dark_sky_summary_6
+        - sensor.dark_sky_summary_7
+        - sensor.dark_sky_summary_8
+        - sensor.dark_sky_summary_tmpl
+        - sensor.dark_sky_temperature
+        - sensor.dark_sky_temperature_1
+        - sensor.dark_sky_temperature_2
+        - sensor.dark_sky_temperature_2_2
+        - sensor.dark_sky_temperature_3
+        - sensor.dark_sky_temperature_4
+        - sensor.dark_sky_temperature_5
+        - sensor.dark_sky_temperature_6
+        - sensor.dark_sky_temperature_7
+        - sensor.dark_sky_temperature_8
+        - sensor.dark_sky_uv_index
+        - sensor.dark_sky_wind_bearing
+        - sensor.dark_sky_wind_bearing_1
+        - sensor.dark_sky_wind_bearing_2
+        - sensor.dark_sky_wind_bearing_3
+        - sensor.dark_sky_wind_bearing_4
+        - sensor.dark_sky_wind_bearing_5
+        - sensor.dark_sky_wind_bearing_6
+        - sensor.dark_sky_wind_bearing_7
+        - sensor.dark_sky_wind_dir
+        - sensor.dark_sky_wind_speed
+        - sensor.dark_sky_wind_speed_1
+        - sensor.dark_sky_wind_speed_2
+        - sensor.dark_sky_wind_speed_3
+        - sensor.dark_sky_wind_speed_4
+        - sensor.dark_sky_wind_speed_5
+        - sensor.dark_sky_wind_speed_6
+        - sensor.dark_sky_wind_speed_7
+

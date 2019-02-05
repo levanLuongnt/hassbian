@@ -1,10 +1,121 @@
 '1537975028443':
-  alias: Mở tv hẹn giờ
+  alias: MỞ TV HẸN GIỜ 60'
   sequence:
   - data:
-      entity_id: switch.tv
+      entity_id: switch.ti_vi
     service: switch.turn_on
-  - delay: 00:00:30
+  - delay: 00:60:00
   - data:
-      entity_id: switch.tv
+      entity_id: switch.ti_vi
     service: switch.turn_off
+change_fan_mode:
+  sequence:
+  - service: switch.turn_on
+    data_template:
+      entity_id: "{% if states.input_boolean.fan_natural.state == 'off' %}\n  {% set\
+        \ arr_switch = [\"switch.fan_speed_1\", \"switch.fan_speed_2\", \"switch.fan_speed_3\"\
+        , \"switch.fan_speed_4\", \"switch.fan_speed_5\", \"switch.fan_speed_6\",\
+        \ \"switch.fan_speed_7\"] %}\n  {{ arr_switch[states.input_number.fan_speed.state\
+        \ | int - 1] }}\n{% else %}\n  {% set arr_switch = [\"switch.fan_speed_1_on\"\
+        , \"switch.fan_speed_2_on\", \"switch.fan_speed_3_on\", \"switch.fan_speed_4_on\"\
+        , \"switch.fan_speed_5_on\", \"switch.fan_speed_6_on\", \"switch.fan_speed_7_on\"\
+        ] %}\n  {{ arr_switch[states.input_number.fan_speed.state | int - 1] }}\n\
+        {% endif %}\n"
+moapp:
+  sequence:
+  - service: mqtt.publish
+    data_template:
+      topic: PC/openapp
+      payload: '{{states(''input_text.openapp'')}}'
+dongapp:
+  sequence:
+  - service: mqtt.publish
+    data_template:
+      topic: PC/closeapp
+      payload: '{{states(''input_text.closeapp'')}}'
+webon:
+  sequence:
+  - service: mqtt.publish
+    data_template:
+      topic: PC/web
+      payload: '{{states(''input_text.webon'')}}'
+chuphinhpc:
+  sequence:
+  - service: mqtt.publish
+    data:
+      topic: PC/shot
+      payload: 'on'
+youtube:
+  sequence:
+  - service: mqtt.publish
+    data_template:
+      topic: PC/youtube
+      payload: '{{states(''input_text.youtube'')}}'
+playyoutube:
+  sequence:
+  - service: mqtt.publish
+    data_template:
+      topic: PC/playyoutube
+      payload: '{{states(''input_text.youtube'')}}'
+'1546207712662':
+  alias: MỞ TV HẸN GIỜ 30'
+  sequence:
+  - data:
+      entity_id: switch.ti_vi
+    service: switch.turn_on
+  - delay: 00:30:00
+  - data:
+      entity_id: switch.ti_vi
+    service: switch.turn_off
+########################################################################################################
+playmusic:
+  alias: Play music
+  sequence:
+  - data:
+      media_content_id: https://www.youtube.com/watch?v=1z6g9nqOlHc
+      media_content_type: music
+    entity_id: media_player.google_home_mini
+    service: media_extractor.play_media
+########################################################################################################
+playmusic_2:
+  alias: Mở nhạc
+  sequence:
+  - data:
+      media_content_id:
+         data_template:
+          entity_id: https://www.youtube.com/watch?v=1z6g9nqOlHc
+      media_content_type: music
+    entity_id: media_player.my_echo
+    service: media_player.play_media
+########################################################################################################
+read_weather:
+  sequence:
+  - service: weather_forecast.get
+    data:
+      place_id: khanh-hoa.nha-trang
+      tts_service: tts.google_say
+      entity_id: media_player.google_home_mini
+      cache: false
+      language: vi
+read_weather2:
+  sequence:
+  - service: weather_forecast.get
+    data:
+      place_id: khanh-hoa.nha-trang
+      tts_service: tts_fpt.say
+      entity_id: media_player.google_home_mini
+      voice_type: nu_mien_bac
+read_weather3:
+  sequence:
+  - service: weather_forecast.get
+    data:
+      place_id: khanh-hoa.nha-trang
+      tts_service: tts.google_say
+      entity_id: media_player.google_home_mini
+      cache: false
+'1548674080851':
+  alias: Đóng rèm trong
+  sequence:
+  - data:
+      entity_id: cover.rem_trong
+    service: cover.close_cover

@@ -1,0 +1,8 @@
+  switch_2_timer_select:
+    name: Chon Thiet Bi
+    icon: mdi:timer
+    options:
+      - TV
+      - Quạt phòng ngủ
+      -  switch.ti_vi
+      - switch.Null

@@ -19,3 +19,33 @@ porch_animation_speed:
     min: 1
     max: 150
     step: 10
+#Fan control
+fan_speed:
+    name: Fan speed
+    initial: 4
+    min: 1
+    max: 9
+    step: 1
+    icon: mdi:fan
+fan_timer:
+    name: Fan timer
+    initial: 0
+    min: 0
+    max: 180 #minutes
+    step: 10
+    icon: mdi:timer
+
+alarm_1_hour:
+    name: Hours
+    icon: mdi:timer
+    initial: 6
+    min: 0
+    max: 23
+    step: 1
+alarm_1_minutes:
+    name: Minutes
+    icon: mdi:timer
+    initial: 30
+    min: 0
+    max: 59
+    step: 1

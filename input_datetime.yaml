@@ -1,0 +1,10 @@
+blabla:
+  name: heating_on_weekday
+  has_date: false
+  has_time: true
+  initial: '05:00:00'
+weekday_time:
+    name: "Weekday Sunrise Time"
+    has_date: false
+    has_time: true
+    initial: '05:00'

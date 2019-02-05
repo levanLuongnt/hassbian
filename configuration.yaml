@@ -2,8 +2,8 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: NHÀ LÊ VĂN LƯỢNG
   # Location required to calculate the time the sun rises and sets
-  latitude: 012.213666
-  longitude: 109.183506 
+  latitude: 12.213596
+  longitude: 109.183568 
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 0
   # metric for Metric, imperial for Imperial
@@ -12,12 +12,23 @@ homeassistant:
   time_zone: Asia/Ho_Chi_Minh
   # Customization file
   customize: !include customize.yaml
-
+  packages: !include_dir_named packages
 # Show links to resources in log and frontend
-introduction:
+#introduction:
 emulated_hue: !include emulated_hue.yaml
-
-# Enables the frontend
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+input_number: !include input_number.yaml
+input_boolean: !include input_boolean.yaml
+switch: !include_dir_merge_list switches/
+input_select: !include input_select.yaml
+input_text: !include input_text.yaml
+input_datetime: !include input_datetime.yaml
+#darksky: b6c5d660a13581f2488e4e74c365aef3
+#fpt: dfa6fba1b627431cb95533f1ab82308c
+lovelace:
+  mode: yaml
 frontend:
   themes:
     happy:
@@ -31,33 +42,44 @@ xiaomi_aqara:
   discovery_retry: 5
   gateways:
     - key: uly9m5ktnmzov2y2
+# Enables the frontend
+notify:    
+  - name: android
+    platform: fcm-android
+    server_key: MYSERVERKEY123456
+  - name: android
+    platform: fcm-android
 
+  - platform: html5
+    name: NOTIFIER_NAME
+    gcm_api_key: AAAASyXwuv0:APA91bEymzPy7NKWHX_0tsTVthIvxEzEiMXjyS98Lbm7hBRJg6wgERsRSolyMSsqdoGuji4hj2LzT0KRZsXJ4ns1MCCw8cmVQFgtsz8vieRdX1Mu1FntFXpiHurpoK1rNv94lNjrGLL_
+    gcm_sender_id: 322759080701
 # Enables configuration UI
 config:
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 # http:
-#   base_url: example.duckdns.org:8123
 http:
-  ssl_certificate: /ssl/fullchain.pem
-  ssl_key: /ssl/privkey.pem
   api_password: 123456
-  base_url: leluong76.duckdns.org
+  ssl_certificate: /home/homeassistant/dehydrated/certs/leluong76.duckdns.org/fullchain.pem
+  ssl_key: /home/homeassistant/dehydrated/certs/leluong76.duckdns.org/privkey.pem
+  base_url: leluong76.duckdns.org:8123
+  
+#   base_url: example.duckdns.org:8123
 zone:
-  - name: 'home'
-    latitude: 12.213666
-    longitude: 109.183506
+  - name: home
+    latitude: 12.213596
+    longitude: 109.183568
     icon: mdi:home
     passive: true
-  - name: Work cty
+  - name: Work
     latitude: 12.207802
     longitude: 109.204697
     icon: mdi:work
-  - name: Work cty VO
+  - name: office wife
     latitude: 12.220795
     longitude: 109.202557
-    icon: mdi:home
-
+    icon: mdi:work
 # Checks for available updates
 # Note: This component will send some information about your system to
 # the developers to assist with development of Home Assistant.
@@ -84,7 +106,40 @@ map:
 
 # Track the sun
 sun:
-
+weather:
+  - platform: darksky
+    api_key: b6c5d660a13581f2488e4e74c365aef3
+    forecast:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+    monitored_conditions:
+      - summary
+      - minutely_summary
+      - hourly_summary
+      - daily_summary
+      - nearest_storm_distance
+      - nearest_storm_bearing
+      - precip_type
+      - precip_intensity
+      - precip_probability
+      - temperature
+      - apparent_temperature
+      - dew_point
+      - wind_speed
+      - wind_bearing
+      - cloud_cover
+      - humidity
+      - pressure
+      - visibility
+      - ozone
+    update_interval:
+      minutes: 30
 # Sensors
 sensor:
   # Weather prediction
@@ -100,25 +155,36 @@ sensor:
     state_topic: "humi/soy"
     unit_of_measurement: '%'
   - platform: darksky
-    api_key: 1efb950e5fd25be6dc4e31fd08d9ef59
+    api_key: b6c5d660a13581f2488e4e74c365aef3
     monitored_conditions: 
-      - summary 
-      - icon 
+      - summary
+      - icon
       - nearest_storm_distance
+      - apparent_temperature
+      - temperature
+      - humidity
+      - pressure
+      - uv_index
   - platform: template
     sensors:
       alarm:
-        friendly_name: 'Time'
-        value_template: '{{ "%0.02d:%0.02d" | format(states("input_number.alarm_hour") | int, states("input_number.alarm_minute") | int) }}'      
+        friendly_name: 'Timer1'
+        value_template: '{{ "%0.02d:%0.02d" | format(states("input_number.alarm_hour") | int, states("input_number.alarm_minute") | int) }}'
+  - platform: template
+    sensors:
+      timer:
+        friendly_name: "Thời gian đã chọn"
+        value_template: '{{ "%0.02d:%0.02d" | format(states("input_number.alarm_1_hour") | int, states("input_number.alarm_1_minutes") | int) }}'
   - platform: template    
     sensors:
       mattroi:
-        friendly_name: "Mặt trời" 
+        friendly_name: "Mặt trời"    
+        unit_of_measurement: 'Lặn'
         value_template: >-
           {% if is_state('sun.sun', 'above_horizon') %}
-            Chưa lặn
+            Chưa
           {% elif is_state('sun.sun', 'below_horizon') %}
-            Đã lặn
+            Đã
           {% endif %}
   - platform: time_date
     display_options:
@@ -173,211 +239,162 @@ sensor:
     unit_of_measurement: "%"
     value_template: '{{ value_json.batt }}'
     device_class: battery
-# Text to speech
+    
+  - platform: template
+    sensors:
+      cambiennguoi_xiaomi:
+        friendly_name: "Cảm biến người"
+        value_template: >-
+          {% if is_state('binary_sensor.motion_sensor_158d00027a31dd', 'on') %}
+          Phát hiện có người trong phòng
+          {% elif is_state('binary_sensor.motion_sensor_158d00027a31dd', 'off') %}
+          Không có người trong phòng
+          {% endif %}
+  - platform: template
+    sensors:
+      cambien_mua:
+        friendly_name: "Cảm biến mưa"
+        value_template: >-
+          {% if is_state('switch.cam_bien_mua', 'on') %}
+          Trời đang mưa
+          {% elif is_state('switch.cam_bien_mua', 'off') %}
+          Trời không mưa
+          {% endif %}        
+  - platform: template
+    sensors:
+      cambiencua_xiaomi:
+        friendly_name: "Cửa Cổng"
+        value_template: >-
+          {% if is_state('binary_sensor.door_window_sensor_158d0002b5b494', 'on') %}
+          Mở
+          {% elif is_state('binary_sensor.door_window_sensor_158d0002b5b494', 'off') %}
+          Đóng
+          {% endif %}
+  - platform: template
+    sensors:
+      pin_cambiencua_xiaomi:
+        friendly_name: "Pin cảm biến cửa cổng:"
+        value_template: "{{ states.binary_sensor.door_window_sensor_158d0002b5b494.attributes.battery_level }}%"
 
+  - platform: template
+    sensors:
+      pin_cambiencua_sanphoi:
+        friendly_name: "Pin cảm biến cửa sân phơi:"
+        value_template: "{{ states.binary_sensor.door_window_sensor_158d0002b5b57d.attributes.battery_level }}%"      
+  - platform: template
+    sensors:
+      cambiennhietdo_xiaomi:
+        friendly_name: "Nhiệt độ phòng ngủ"
+        value_template: "{{states('sensor.temperature_158d000223fca2') }} °C"
+
+  - platform: template
+    sensors:
+      cambienanhsang_xiaomi:
+        friendly_name: "Cường độ sáng"
+        value_template: "{{states('sensor.illumination_7c49ebb1b4c9') }} lm"
+
+  - platform: template
+    sensors:
+      cambiendoam_xiaomi:
+        friendly_name: "Độ ẩm phòng ngủ"
+        value_template: "{{states('sensor.humidity_158d000223fca2') }} %"
+
+  - platform: template
+    sensors:
+      pin_cambiennhietam_xiaomi:
+        friendly_name: "Pin cảm biến ẩm:"
+        value_template: "{{ states.sensor.humidity_158d000223fca2.attributes.battery_level }}%"
+        
+  - platform: mqtt
+    name: "Công suất đang tải"
+    state_topic: "tele/sonoff/SENSOR"
+    value_template: "{{ value_json.ENERGY.Power }}"
+    unit_of_measurement: "W"
+    icon: mdi:power-plug
+  
+  - platform: mqtt
+    name: "Công suất biểu kiến"
+    state_topic: "tele/sonoff/SENSOR"
+    value_template: "{{ value_json.ENERGY.ApparentPower }}"
+    unit_of_measurement: "VA"
+    icon: mdi:power-plug
+    
+  - platform: mqtt
+    name: "Công suất phản kháng"
+    state_topic: "tele/sonoff/SENSOR"
+    value_template: "{{ value_json.ENERGY.ReactivePower }}"
+    unit_of_measurement: "VAr"
+    icon: mdi:power-plug
+
+  - platform: mqtt
+    name: "Điện áp"
+    state_topic: "tele/sonoff/SENSOR"
+    value_template: "{{ value_json.ENERGY.Voltage }}"
+    unit_of_measurement: "V"
+    icon: mdi:flash
+
+  - platform: mqtt
+    name: "Cường độ dòng điện"
+    state_topic: "tele/sonoff/SENSOR"
+    value_template: "{{ value_json.ENERGY.Current }}"
+    unit_of_measurement: "A"
+    icon: mdi:power-socket
+
+
+  - platform: mqtt
+    name: "Lượng điện tiêu thụ trong ngày"
+    state_topic: "tele/sonoff/SENSOR"
+    value_template: "{{ value_json.ENERGY.Today }}"
+    unit_of_measurement: "kWh"
+    icon: mdi:power-socket-eu
+
+  - platform: mqtt
+    name: "Lượng điện tiêu thụ hôm qua"
+    state_topic: "tele/sonoff/SENSOR"
+    value_template: "{{ value_json.ENERGY.Yesterday }}"
+    unit_of_measurement: "kWh"
+    icon: mdi:power-socket-eu
+    
+  - platform: mqtt
+    name: "Lượng điện tiêu thụ tháng trước"
+    state_topic: "tele/sonoff/SENSOR"
+    value_template: "{{ value_json.ENERGY.Lastmonth }}"
+    unit_of_measurement: "kWh"
+    icon: mdi:power-socket-eu
+
+  - platform: mqtt
+    name: "Tổng lượng điện tiêu thụ"
+    state_topic: "tele/sonoff/SENSOR"
+    value_template: "{{ value_json.ENERGY.Total }}"
+    unit_of_measurement: "kWh"
+    icon: mdi:power-socket-eu
+
+  - platform: mqtt
+    name: "Hệ số công suất"
+    state_topic: "tele/sonoff/SENSOR"
+    value_template: "{{ value_json.ENERGY.Factor }}"
+    icon: mdi:percent
+
+  - platform: mqtt
+    name: "Nhiệt độ phòng khách"
+    state_topic: "tele/sonoff/SENSOR"
+    value_template: "{{ value_json.DHT11.Temperature }}"
+    unit_of_measurement: "°C"
+    icon: mdi:thermometer
+    
+  - platform: mqtt
+    name: "Độ ẩm phòng khách"
+    state_topic: "tele/sonoff/SENSOR"
+    value_template: "{{ value_json['DHT11'].Humidity }}"
+    unit_of_measurement: "%"
+    icon: mdi:water-percent
+# Text to speech
 tts:
   - platform: google
-    cache: true
-    cache_dir: /tmp/tts
-    time_memory: 300
-    language: 'vi'
-binary_sensor:
-  - platform: ping
-    host: 8.8.8.8
-    scan_interval: 20 
-  - platform: ping
-    host: 192.168.1.68
-# Cloud
-cloud:
-ifttt:
-  key: cQBgnlPUuP4wUuBVjNTT1X
-
-group: !include groups.yaml
-automation: !include automations.yaml
-script: !include scripts.yaml
-
-switch:
-  - platform: broadlink
-    host: 192.168.1.2
-    mac: 'b4:43:0d:38:a4:bd'
-  - platform: broadlink
-    host: 192.168.1.2
-    mac: 'b4:43:0d:38:a4:bd'
-    timeout: 15
-    switches:
-      # Will work on most Phillips TVs:
-      tv_phillips:
-        friendly_name: "Phillips Tv Power"
-        command_on: '6QArARYQBAwQDx0EHAUaBRwEGgYaBhoGGgYZBxkHGQcZBwkWCRgHGAcXCRYKFgkVCRYZBxkICewKFgkXGAcZBxkIFwgYCBgIGAgYCBcKFgoWCxSqBFwEPPIHGQYaFgoVCxULFgsVCxQLFQsVCxULFQsVCxULBhkFGgYaBRkGGgcXBxkGGRYKFwkG7wgYBxgYCBcKFgoWCRcJGQcZBxgKFggYCBcKFgoGGQcYBxoFGAgYBxgHGAcYFwkZBwjuCRYJFhkIGQcZBxgIGQcYCBgIGAgYCBgIGAgYCAgXCBgHGAgYBxcIFwgYCBcYCBgJB+4KFQkXGAgYCBgIGAgYCBgJFwgYCBgIGAgYCBkHCRcIFwgXCBcKFggXCBcJFhkHGQkG7wkXCBYZBxkHGQgFAAXcAAAAAAAAAAAAAAAAAA=='
-        command_off: '6QBHAQ8THAQbBxkFHAQcBBoGGgYZBxoGGQcZBxgICRYIFxgJFwgIFwkXBxcIGAcYBxgH7gkWCBcYCBgIGAgXChYJFwkWCxYLEBVcBBsEHxAOFAsEHAQbBhkFGwQbBQABDggXBxkWCRcJGAgWChYKFgoWCxUKFgoWChUOEwkIFwcYFwoWCQgYBhoFGQcYBhoFGQfuCBcIGBcIGAgYChYIGAoXBxgIGAkWCxUJFwkXCQcYBxgXCRcJBxgIFwgXCBgHGAcYCO0JFgkWGQgYCBgHGQcYCBgKFggZBxgJFwkXCBgICBcIFxgIGAgIGQcWCBkHFwgXChUI7ggXCRYZBxkJFwcYCBkHGAgaBhgIGAgYCBgIGAgIGAgWGgYZBwgXCBcIGAcYCBcJFgjvCBYJFhkHGQcZBxkIGAcYCBgIGAkXCBgIGAgZBwgXCQAF3AA='
-      # Will work on most LG TVs
-      tv_lg:
-        friendly_name: "LG Tv Power"
-        command_on: 'JgBYAAABIJISExETETcSEhISEhQQFBETETcROBESEjcRNhM1EjcTNRMTERISNxEUERMSExE2EjYSNhM2EhIROBE3ETcREhITEgAFGwABH0oSAAwzAAEfShEADQU='
-        command_off: 'JgBYAAABIJISExETETcSEhISEhQQFBETETcROBESEjcRNhM1EjcTNRMTERISNxEUERMSExE2EjYSNhM2EhIROBE3ETcREhITEgAFGwABH0oSAAwzAAEfShEADQU='
-      tv_lg_hdmi1_hdmi2:
-        friendly_name: "LG Tv HDMI12"
-        command_on: 'JgBIAAABIZMRExITEjYSExMRERURExEUEDkRNxEUEjYSNhM3ETcSNxITETgSNhI2ExMQExE4ETYSNxIUERMSExE4ETcRFBETEQANBQ=='
-        command_off: 'JgBQAAABJJMSEhISETgSEhITEBMSEhMSETcSNxMREjcSNxI3EjcSOBETERITNhM2EhITERM2EzcRNxI3ExISEhI3EjcRExETEgAFLQABJEoRAA0FAAAAAAAAAAA='
-      tv_lg_hdmi3:
-        friendly_name: "LG Tv HDMI3"
-        command_on: 'JgBIAAABIZMSFBISETgRExEUERQQFBETEjcTNhMSETgRNxE3EjcROBM2ERMSFBE4ERMSNxM2EjUSFBE2ETgRExM2ExITEhATEwANBQ=='
-      tv_lg_av1_av2:
-        friendly_name: "LG Tv AV12"
-        command_on: 'JgBIAAABIpQPFBITETgSEw8UEhQSEhEVDzgSOBAUETgQOQ84EjgRNxITETgSExA5EDgREhI3EhMROBMSEDkQFBETEjYTEhE4EQANBQ=='
-        command_off: 'JgBIAAABH5YPFBETETgUERAUEBURFBATETgROBEUETcSNxE4ETcSOBISEBUQFREUEjUSFBA5ETcRNxE4ETkQOBAUEjcRFRAUEQANBQ=='
-      tv:
-        friendly_name: "TẮT MỞ TV"
-        command_on: '1ws0AAsAAQsdCRwKCxscChwJCxscCQobCxoLGhwJCxscChwJCxoLGwsaHAocCRwJCxscCRwJHAoAAAAA'
-        command_off: '1w80AAsAAQwdCQwaHQgLGh0JHAkMGgsaCxodCR0JCxocChsKCxoLGgsaCxsLGxwJCxoMGhwJHAkAAAAA'
-        
-      quat_ngu_on_3:
-        friendly_name: "TẮT VÀ MỞ QUẠT NGỦ SÔ 3"
-        command_on: '6QAoAwQEBAQQDgQEDxAdBBsFGwUbBRsGGgYaBhoHGQcZCBgHGQcJFgkXCRYKFQoWCRYKFgkXGQYZCQfvChUJGBgIGAcaBhkHGQgYCBoGGAkXCRkIGAgWDAQbBBsFGwUaBBwEGwQcBBwKAAEtBhkGGhUNFAsVCxYKFQwWChULFQwUCxULFgsVCwUbBBoGGgUaBhkGGwUZBhkXChYKBvEIFwkYFwgXChcJFwkXChYJGQgXCRcJFwkXChcJBxkHGAcYBxgIGAgXCBgHGBcJGAgI8QgXCBgXCBgJGAgYCBgJFwkZBxgIGAkXCRgIGAkHGAcYCBgHGAgXChYIFwgXGQgYCAjxCBYJFxkHGQgYCBgIGQkXCBgIGAgYCBkIGAgYCAgYCBcJGAcXCBgIFwgXCRcYCBkHCPEJFwgWGwYZBxkHGQgYCBkHGgcZBxgJGAgZBxoGCBgIFwgZBxcIFwkXCBcJFxgJFwgI8AoWChUaBxkHGQcZCBgIGQgYCBgIGAgaBxkIFwgIGQcXCRcIGAcXCRcIFwoWGAgZBwnxCRYIGBkGGQcZCBoGGQcaBxgIGQcaBxgIGQkXBwkXChUJGAcXChcHFwkXCBcZCBgICPAKFgkXGQcZBxkHGQkZBhkHGQgYCBkHGQgYCBkHCRgHFwkXCRYJFwgXCRcIGBgJFwgI8AoXCBcaBhkIGAgYCBkIGAcZCBkHGQcZCBgJGQcIFwoVCRcJFgoWCBgJFgkWGwYZBwrvCRYKFhkHGQcaBxkIGQcZBxkHGQgYCBoHGAgZBwkWCRcJFgkXCBcJFwoVCRcaBxgICPEJFwkVGwcYBxkHGwYaBhkHGQgZBxkIGAgZCRcICRYJFwgXCRcIFwkXCBgIGBgHGQkH8AoWCRYaBxkHGgcYCRkGGQcZCBkHBBAGBxgIGQcZCAgXCRcIFwkXCBcJFwkYBxcZBxkICPAKFwkWGQcZBxkJGAcZCBoHGAcaBhkJGAcaBxgICBgIFwoWCBgIFwkXCBgHFxkIGAgI8goUChYZBxoIGAkXBxoHGQgaBhgIGgcYCBgIGgcIGAcZBxcJFwgYCBcJFgoWGQcZCAgABdw='
-        command_off: '6QsyABoIGQgZCBoIGQgZCBoIGQkZCQkXCRgZCBkICBgJGAkYCRgJGAkYCfAJFwkWGggZCBoHAAAAAAAA'
-      quat_ngu_1:
-        friendly_name: " MỞ QUẠT NGỦ SỐ 1"
-        command_on: '6QsyAAkYCBgJFxoHGggJFwoXCRgJFwnuChYKFhoHGggaCBoHGggZCBoHGQgaCBkIGQkZCQkXAAAAAAAA'
-      tuoi_lan:
-        friendly_name: "Tưới Lan"
-        command_on: '1wCoAgQTBBMUBBMLCguwBBINCRUMCgwLDAkUDB4OCBUEEQQSBBIEEgQSBBIEEgQRBBEEEgQRDgkMCQSiBBEOCAQSDQkNCA8GBBEPCAQQDwcEFBMEEQQRBBEEEQQRBBAFEAUQBREFDhEFDwgEowQQEAYFEA8GEAYPBwUPEAcEEA8HBBEFDwUQBRAGDwUQBREEDwUQBRAFDwcOEAcPBgWiBQ8RBAYPEQcOBw8GBRAQBwQPEQUFEAYOBhAFDwUQBREEDwYQBQ8GDwUPBhAQBRAGBqAHDhEFBg8QBREFEQUFEBAFBg8QBgUQBg4IDQYPBg8GDwYOBhAFDwYPBg8GDhEFEAYGoAcOEQUGDxEEEgYPBQYPEQQHDhEFBhAFDwUQBw0GDwcOBhAFDgcOBw4GEAUPEQYPBQefBw4SBAYQEAUQBRIEBg8QBwQPEQUGDwURBBAFDwYPBhAFDwcOBg8HDgYOBg8QBhAFBqIGDhEEBw4RBRIEEQQGEA8HBQ4RBQYPBg8GDwYOBg8GEQQPBg8GDggNBw4HDhIEEQQGoQgMEgQIDREFEQQRBgYOEQUHDhAFBg8GEAUPBg8GDggNBw8GDgYPBhAFDwYPEAURBQahBg4RBQYPEAURBRAHBg0RBQcOEQUGDgcOBg8IDQYPBhAFDwYPBg4HDgcOBw8QBRAFBqEGDhIEBg4SBBEFEgUFDxAGBg4SBAYPBg8GDgcOBg8HDgcNBw4HDgcOBw4HDRIEEQUGoAgOEgQHDhEFEgQRBQcOEQUGDxAFBg8GDwYPBg4HDgcOBw4HDgYOBw4HDgcOEQQRBgWhBw0SBQcNEgQSBBEFBg8RBgUQDwYFEAYOBg8GDgcOBw4HDgYQBg4GEAUPBg4SBBEAA5YrBhEFBAcQCAoEBBIEBgQEHAczBAUEAAXc='
-        command_off: '1wCXARIECA8SBAYPEQUHDwkNCA8HDwgPCA8HEAcPEQQSBAgPBw8JDgkNCp4JDhIECA8RBBIEEgQIDxIECA8QBAcQBw8IDggPCQ0IEAcPCA8QBRAEBxAHDwcRBg8JnwkOEQQJDhIEEQQRBAgPEQQIDxIEBw8IDwcPCQ4HDwgPCQ0IDxEEEQQIDwkOBxEGDwmfCgwTDA4QBBEFDwUHDxEFBhEQBAgPCA4IDwgPBw8IEAYPCA4SBBEECA8HDwgPCA4KngkOEgQKDBIEEwQRBAgPEgQIEBAEBxAHDwcQBxAHEAYRBhAHDxEEEQUHDwcPCA4JDgigCQ0UCg4SBBIEEQQHEBIECA8RBAgQBw8HDwgPCA4IDwgPCQ0RBBEECA8IDwgOCA8InwoNEwwOEhMFEAQIDxIECQ8RBAgQBw4IDwkNCQ8HDwcPCA8RBBIECBAIDwYPCA4JoAoMEwsNEgQRBQ8ECA8RBAgPEAQIDggQBw8HDwkNCQ8HDwkOEQQRBAkOBw8IDwcAA/cEBAUFBAgEBAQEFQQFCQwzBAkGAAXcAA=='
-      nuoc_cong:
-        friendly_name: "Nước Cổng"
-        command_on: '1ws0ABodCAwaHQkLGh0JCxscCR0JHAocCQsbCxoLGgsaDBoMGgsAAQweCR0IDBodCQsaHQgMGgwAAAAA='
-        command_off: '1wo0AAwaCxsLGgwaHAocCRwKCxsLGh0JDBkcChsKHAkcChwKCgABDR4JHQkdCQsaHAkdCgobCxoAAAAA'
-  - platform: mqtt
-    name: "Light 1"
-    state_topic: "stat/test/POWER1"
-    command_topic: "cmnd/test/POWER1"
-    payload_on: "ON"
-    payload_off: "OFF"
-    qos: 1 
-  - platform: mqtt
-    name: "Light 2"
-    state_topic: "stat/test/POWER2"
-    command_topic: "cmnd/test/POWER2"
-    payload_on: "ON"
-    payload_off: "OFF"
-    qos: 1  
-  - platform: mqtt
-    name: "Light 3"
-    state_topic: "stat/test/POWER3"
-    command_topic: "cmnd/test/POWER3"
-    payload_on: "ON"
-    payload_off: "OFF"
-    qos: 1    
-  - platform: mqtt
-    name: "Light 4"
-    state_topic: "stat/test/POWER4"
-    command_topic: "cmnd/test/POWER4"
-    payload_on: "ON"
-    payload_off: "OFF"
-    qos: 1   
-  - platform: mqtt
-    name: "Turn fan off"
-    command_topic: "ha/fanoff"
-    payload_on: "ON"
-    payload_off: "OFF"
-    qos: 1   
-fan:
-  - platform: mqtt
-    name: "Level 1"
-    state_topic: "ha/level1/state"
-    command_topic: "ha/level1/set"
-    payload_on: "ON"
-    payload_off: "OFF"
-    qos: 1 
-    retain: true
-  - platform: mqtt
-    name: "Level 2"
-    state_topic: "ha/level2/state"
-    command_topic: "ha/level2/set"
-    payload_on: "ON"
-    payload_off: "OFF"
-    qos: 1 
-    retain: true 
-  - platform: mqtt
-    name: "Level 3"
-    state_topic: "ha/level3/state"
-    command_topic: "ha/level3/set"
-    payload_on: "ON"
-    payload_off: "OFF"
-    qos: 1  
-    retain: true
-  - platform: mqtt
-    name: "Level 4"
-    state_topic: "ha/level4/state" 
-    command_topic: "ha/level4/set"
-    payload_on: "ON"
-    payload_off: "OFF"
-    qos: 1  
-    retain: true
-  - platform: mqtt
-    name: "Turn fan off"
-    command_topic: "ha/fanoff"
-    payload_on: "ON"
-    payload_off: "OFF"
-    qos: 1  
-    retain: true
-  
-mqtt:
-  broker: 192.168.1.13
-  port: 1883
-  username: luong
-  password: 123456
-light:
-  - platform: yeelight
-    devices:
-      192.168.1.9:
-        name: Bed Room
-        transition: 1000
-        use_music_mode: True #(defaults to False)
-        save_on_change: False
-        #(defaults to True)
-
-  - platform: flux_led 
-    devices: 
-      192.168.1.20: 
-        name: led TV
-# Example configuration.yaml
-  - platform: flux_led
-    devices:
-      192.168.1.20:
-        name: flux_lamppost
-  - platform: mqtt_json
-    name: "Porch Strip"
-    state_topic: "bruh/porch"
-    command_topic: "bruh/porch/set"
-    effect: true
-    effect_list:
-      - bpm
-      - candy cane  
-      - confetti  
-      - cyclon rainbow  
-      - dots  
-      - fire  
-      - glitter  
-      - juggle  
-      - lightning
-      - noise  
-      - police all  
-      - police one  
-      - rainbow  
-      - rainbow with glitter  
-      - ripple  
-      - sinelon  
-      - solid  
-      - twinkle  
-    brightness: true
-    flash: true
-    rgb: true
-    optimistic: false
-    qos: 0     
-
+    language: vi
 cover:
   - platform: mqtt
-    name: "SKY DOOR 1"
+    name: "Giếng Trời Phải"
     command_topic: "dc1/cover/set"
     state_topic: "dc1/cover/state"
 #    availability_topic: "home-assistant/cover/availability"
@@ -392,7 +409,7 @@ cover:
     # payload_not_available: "offline"
     optimistic: false
   - platform: mqtt
-    name: "SKY DOOR 2"
+    name: "Giếng Trời Trái"
     command_topic: "dc2/cover/set"
     state_topic: "dc2/cover/state"
 #    availability_topic: "home-assistant/cover/availability"
@@ -406,21 +423,10 @@ cover:
     # payload_available: "online"
     # payload_not_available: "offline"
     optimistic: false
-  - platform: mqtt
-    name: "RÈM"
-    command_topic: "door/cover/set"
-    state_topic: "door/cover/state"
 #    availability_topic: "home-assistant/cover/availability"
-    qos: 0
-    retain: true
-    payload_open: "OPEN"
-    payload_close: "CLOSE"
-    payload_stop: "STOP"
-    state_open: "open"
-    state_closed: "close"
     # payload_available: "online"
     # payload_not_available: "offline"
-    optimistic: false
+   
   - platform: mqtt
     name: "RÈM NGOÀI"
     command_topic:  "door/cover/set"
@@ -481,8 +487,104 @@ cover:
           {% else %}
             mdi:garage
           {% endif %}
-input_number: !include input_number.yaml
-# Example configuration.yaml entry for Netgear device
+# Cloud
+cloud:
+panel_iframe:
+  configurator:
+    title: Configurator
+    icon: mdi:wrench
+    url: http://leluong76.duckdns.org:3218
+
+owntracks:
+  max_gps_accuracy: 200
+  waypoints: true
+  mqtt_topic: "owntracks/#"
+  events_only: true
+  waypoint_whitelist:
+    - jon
+    - ram
+  region_mapping:
+    cabin: home
+    office: work
+media_player:
+  - platform: alexa
+    email: "leluongnt@gmail.com"
+    password: "123456"
+    url: "amazon.com"
+  - platform: cast
+    host: 192.168.1.7
+  - platform: webostv
+    host: 192.168.1.18
+    name: Living Room TV
+    filename: webostv.conf
+    timeout: 5
+    turn_on_action:
+      service: persistent_notification.create
+      data:
+        message: "Turn on action"
+    customize:
+      sources:
+        - livetv
+        - youtube
+        - makotv
+        - netflix
+binary_sensor:
+  - platform: ping
+    host: 8.8.8.8
+    scan_interval: 20 
+  - platform: ping
+    host: 192.168.1.68
+ifttt:
+  key: cQBgnlPUuP4wUuBVjNTT1X
+light:
+  - platform: yeelight
+    devices:
+      192.168.1.19:
+        name: Bed Room
+        transition: 1000
+        use_music_mode: True #(defaults to False)
+        save_on_change: False
+        #(defaults to True)
+
+  - platform: flux_led 
+    devices: 
+      192.168.1.20: 
+        name: led TV
+# Example configuration.yaml
+  - platform: flux_led
+    devices:
+      192.168.1.20:
+        name: flux_lamppost
+  - platform: mqtt
+    name: "Porch Strip"
+    schema: "json"
+    state_topic: "bruh/porch"
+    command_topic: "bruh/porch/set"
+    effect: true
+    effect_list:
+      - bpm
+      - candy cane  
+      - confetti  
+      - cyclon rainbow  
+      - dots  
+      - fire  
+      - glitter  
+      - juggle  
+      - lightning
+      - noise  
+      - police all  
+      - police one  
+      - rainbow  
+      - rainbow with glitter  
+      - ripple  
+      - sinelon  
+      - solid  
+      - twinkle  
+    brightness: true
+    flash: true
+    rgb: true
+    optimistic: false
+    qos: 0
 device_tracker:
   - platform: netgear
     host: 192.168.1.1
@@ -500,12 +602,19 @@ device_tracker:
   - platform: icloud
     username: leluongnt@gmail.com
     password: Luong123456
-    account_name: iphone7
+    account_name: iphone
+    gps_accuracy_threshold: 500
   - platform: icloud2
     username: leluongnt@gmail.com
     password: Luong123456
     account_name: icloud_descriptive_name
     filter_devices: 'iphone7'
+    gps_accuracy_threshold: 500
+  - platform: owntracks
+    max_gps_accuracy: 200
+    waypoints: True
+    
+    events_only: True
 climate:
   - platform: broadlink
     name: Máy lạnh Panasonic
@@ -515,7 +624,7 @@ climate:
     min_temp: 16
     max_temp: 30
     target_temp: 27
-    temp_sensor: sensor.broadlink_sensor_temperature
+    temp_sensor: sensor.temperature_158d000223fca2
     default_operation_from_idle: cool
     default_operation: cool
     default_fan_mode: mid
@@ -528,23 +637,62 @@ climate:
         - low
         - mid
         - high
-  - platform: broadlink
-    name: Bed Room Fan
-    host: 192.168.1.2
-    mac: 'b4:43:0d:38:a4:bd'
-    ircodes_ini: 'broadlink_fan_codes/living_room_fan.ini'
-    default_speed: low
-    defaut_direction: left
-    customize:
-      operations:
-        - on
-        - off
-        - 1h
-        - 2h
-        - 4h
-        - 8h
-      fan_modes:
-        - low
-        - medium
-        - high
-        - highest   
+google_assistant:
+  project_id: 322759080701-af2pk0v8e44m7ujua1vddo4h104k82hr.apps.googleusercontent.com
+  api_key: AIzaSyBhc3Y-Z71qcZezlVS7HHS_AXqfXasdZBo
+  exposed_domains:
+    - switch
+    - light
+    - group
+    - cover
+    - automation
+    - input boolean
+    - climate 
+    - script 
+    - fan
+    - scene     
+  entity_config:
+    switch.kitchen:
+      name: CUSTOM_NAME_FOR_GOOGLE_ASSISTANT
+      aliases:
+        - BRIGHT_LIGHTS
+        - ENTRY_LIGHTS
+    light.living_room:
+      expose: false
+      room: LIVING_ROOM
+sonoff:
+  username: '+84336328109'
+  password: 12345678
+  scan_interval: 60
+  grace_period: 600
+  api_region: 'as'
+homekit:
+  filter:
+    include_domains:
+      - alarm_control_panel
+      - light
+      - media_player
+      - switch
+      - fan
+      - cover
+      - input_boolean
+      - script
+      - climate
+      - automation
+  entity_config:
+    alarm_control_panel.home:
+      code: 1234
+    light.kitchen_table:
+      name: Kitchen Table Light
+    lock.front_door:
+      code: 1234
+    media_player.phong_khach:
+      feature_list:
+        - feature: on_off
+        - feature: play_pause
+        - feature: play_stop
+        - feature: toggle_mute
+    switch.bedroom_outlet:
+      type: outlet
+weather_forecast:
+media_extractor:

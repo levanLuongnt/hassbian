@@ -3,33 +3,27 @@ hostone:
   hide_if_away: false
   icon:
   mac:
-  name: Lượng
+  name: hostone
   picture:
   track: true
 
-luong_note_8:
+galaxy_note8:
   hide_if_away: false
   icon:
   mac:
-  name: luong
+  name: Galaxy Note8
   picture:
   track: true
 
-luong_0c2a836836c34e00aa031fe273bac44d:
-  hide_if_away: false
-  icon:
-  mac:
-  name: IPhone
-  picture:
-  track: true
-beacon_work:
-  hide_if_away: false
-  icon:
-  mac:
-  name: work
-  picture:
-  track: true
 iphone7:
+  hide_if_away: false
+  icon:
+  mac:
+  name: iPhone7
+  picture:
+  track: true
+
+iphone:
   hide_if_away: false
   icon:
   mac:

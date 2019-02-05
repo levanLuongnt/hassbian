@@ -1,198 +1,147 @@
-
-title: NHÀ LÊ VĂN LƯỢNG
-# Include external resources
 resources:
-  - url: /local/my-custom-card.js
+  - url: /local/Custom_Cards/bignumber-card/bignumber-card.js
     type: js
-  - url: /local/my-webfont.css
-    type: css
-
-# Optional background for all views. Check https://developer.mozilla.org/en-US/docs/Web/CSS/background for more examples.
-background: center / cover no-repeat url("/background.png") fixed
-# Exclude entities from "Unused entities" view
-excluded_entities:
-  - weblink.router
+  - url: /local/Custom_Cards/monster-card/monster-card.js
+    type: js
+  - url: /local/Custom_Cards/gauge-card.js
+    type: js
+  - url: /local/Custom_Cards/thermostat-card/thermostat-card.js
+    type: module
+  - url: /local/Custom_Cards/plan-coordinates/plan-coordinates.js
+    type: js
+  - url: /local/Custom_Cards/alarm_control_panel-card/alarm_control_panel-card.js
+    type: js
+  - url: /local/Custom_Cards/beer-card/beer-card.js
+    type: js
+  - url: /local/Custom_Cards/entity-attributes-card/entity-attributes-card.js
+    type: js
+  - url: /local/Custom_Cards/group-card/group-card.js
+    type: js
+  - url: /local/Custom_Cards/home-setter/home-setter.js
+    type: js
+  - url: /local/Custom_Cards/button-card/button-card.js
+    type: module
+  - url: https://unpkg.com/moment@2.23.0/moment.js
+    type: js
+  - url: /local/Custom_Cards/calendar-card/calendar-card.js
+    type: module
+  - url: /local/weatherbg-card.js
+    type: module
+  - url: /local/dark-sky-weather-card.js
+    type: js
+  - url: /local/custom-fan-card.js
+    type: js
+name: Orchard Cottages
 views:
-    # View tab title.
-  - title: Example
-    # Optional unique id for direct access /lovelace/${id}
-    id: example
-    # Optional background (overwrites the global background).
-    background: radial-gradient(crimson, skyblue)
-    # Each view can have a different theme applied. Theme should be defined in the frontend.
-    theme: dark-mode
-    # The cards to show on this view.
+  - icon: mdi:home
+    title: Home
+    id: home
+    background:
+    theme:
     cards:
-        # The filter card will filter entities for their state
-      - type: entity-filter
-        entities:
-          - device_tracker.paulus
-          - device_tracker.anne_there
-        state_filter:
-          - 'home'
-        card:
-          type: glance
-          title: People that are home
-
-        # The picture entity card will represent an entity with a picture
-      - type: picture-entity
-        image: https://www.home-assistant.io/images/default-social.png
-        entity: light.bed_light
-
-    # Specify a tab icon if you want the view tab to be an icon.
-  - icon: mdi:home-assistant
-    # Title of the view. Will be used as the tooltip for tab icon
-    title: Second view
-    cards:
-        # Entities card will take a list of entities and show their state.
       - type: entities
-        # Title of the entities card
-        title: Example
-        # The entities here will be shown in the same order as specified.
-        # Each entry is an entity ID or a map with extra options.
         entities:
-          - light.kitchen
-          - switch.ac
-          - entity: light.living_room
-            # Override the name to use
-            name: LR Lights
+        - entity: media_player.google_home_mini
+          name: Google Home
+        #- entity: media_player.mibox3
+        #  name: Mibox3
+      - type: picture-glance
+        title: Phòng Khách
+        entities:
+          - switch.ti_vi
+          - switch.led_tv
+          - light.porch_strip
+          - input_number.porch_animation_speed
+          - light.flux_lamppost
+          - switch.original_xiaomi_mi_smart_wifi_socket
+          - group.livingroom_fan
+          - media_player.google_home_mini
+          - entity: fan.living_room_fan
+            icon: mdi:fan
+        image: /local/pics/livingroom01.jpg
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/1/
 
-        # The markdown card will render markdown text.
-      - type: markdown
-        title: Lovelace
-        content: >
-          Welcome to your **Lovelace UI**.
-
-
-
-- type: vertical-stack
-  cards:
-    - type: media-control
-      entity: media_player.tv
-    - type: conditional
-      conditions:
-        - entity: media_player.tv
-          state: "on"
-      card:
-        type: picture-elements
-        image: /local/rect4.png
-        elements:
-          - type: icon
-            tap_action: toggle
-            entity: media_player.tv
-            icon: mdi:power
-            style:
-              top: 7.5%
-              left: 11%
-              --iron-icon-height: 30px
-              --iron-icon-width: 30px
-          - type: icon
-            tap_action: toggle
-            entity: switch.mute
-            icon: mdi:volume-mute
-            style:
-              top: 7.74%
-              left: 28.5%
-              color: '#a31a40'
-              --iron-icon-height: 30px
-              --iron-icon-width: 30px
-          - type: icon
-            tap_action: toggle
-            entity: switch.input
-            icon: mdi:video-input-hdmi
-            style:
-              top: 7.6%
-              left: 45.4%
-              color: '#a31a40'
-              --iron-icon-height: 30px
-              --iron-icon-width: 30px
-          - type: icon
-            tap_action: toggle
-            entity: switch.setting
-            icon: mdi:settings
-            style:
-              top: 7.5%
-              left: 62.4%
-              color: '#a31a40'
-              --iron-icon-height: 30px
-              --iron-icon-width: 30px
-          - type: icon
-            tap_action: toggle
-            entity: switch.volume_up
-            icon: mdi:plus
-            style:
-              top: 18.7%
-              left: 11%
-              color: '#a31a40'
-              --iron-icon-height: 30px
-              --iron-icon-width: 30px
-          - type: icon
-            tap_action: toggle
-            entity: switch.volume_down
-            icon: mdi:minus
-            style:
-              top: 38.6%
-              left: 11%
-              color: '#a31a40'
-              --iron-icon-height: 30px
-              --iron-icon-width: 30px
-          - type: icon
-            tap_action: toggle
-            entity: switch.back
-            icon: mdi:arrow-left-drop-circle
-            style:
-              top: 69.6%
-              left: 11.6%
-              color: '#a31a40'
-              --iron-icon-height: 30px
-              --iron-icon-width: 30px
-          - type: icon
-            tap_action: toggle
-            entity: switch.up
-            icon: mdi:circle
-            style:
-              top: 54%
-              left: 50.3%
-              color: '#a31a40'
-              --iron-icon-height: 30px
-              --iron-icon-width: 30px
-          - type: icon
-            tap_action: toggle
-            entity: switch.left
-            icon: mdi:circle
-            style:
-              top: 69.5%
-              left: 28.8%
-              color: '#a31a40'
-              --iron-icon-height: 30px
-              --iron-icon-width: 30px
-          - type: icon
-            tap_action: toggle
-            entity: switch.right
-            icon: mdi:circle
-            style:
-              top: 69.1%
-              left: 72%
-              color: '#a31a40'
-              --iron-icon-height: 30px
-              --iron-icon-width: 30px
-          - type: icon
-            tap_action: toggle
-            entity: switch.down
-            icon: mdi:circle
-            style:
-              top: 85.1%
-              left: 50.25%
-              --iron-icon-height: 30px
-              --iron-icon-width: 30px
-              color: '#a31a40'
-          - type: icon
-            tap_action: toggle
-            entity: switch.ok
-            icon: mdi:circle-slice-8
-            style:
-              top: 69.1%
-              left: 50.25%
-              color: '#a31a40'
-              --iron-icon-height: 50px
-              --iron-icon-width: 50px
+      - type: picture-glance
+        title: Phòng Ngủ
+        entities:
+        - switch.quat_ngu_1
+        - switch.quat_ngu_on_3
+        - media_player.my_echo
+        - light.yeelight_rgb_7c49eb1231a8
+        - light.gateway_light_7c49ebb1b4c9
+        - climate.bed_room_fan
+        - climate.may_lanh_panasonic
+        - cover.rem_trong
+        - cover.rem_ngoai
+        - fan.bedroom_fan
+        state_image:
+          "on": /local/pics/bedroom01.jpg
+          "off": /local/pics/bedroom01off.jpg
+        entity: light.yeelight_rgb_7c49eb1231a8
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/2/
+      - type: weather-forecast
+        entity: weather.dark_sky
+      - type: conditional
+        conditions:
+          - entity: light.led_tv
+            state: "on"
+        card:
+          type: light
+          entity: light.led_tv
+  - icon: mdi:sofa
+    title: Living Room
+    id: living_room
+    cards:
+      - type: glance
+        title: Phòng Khách
+        background: no-repeat url("/local/livingroom01.jpg");
+        show_header_toggle: true
+        entities:
+        - switch.tv
+        - switch.original_xiaomi_mi_smart_wifi_socket
+        - automation.mo_tv_30_phut
+        - automation.mo_tv_60_phut
+        - automation.tv_timer
+        - group.livingroom_fan
+        - media_player.google_home_mini
+        - light.flux_lamppost
+        - light.led_tv
+        - light.porch_strip
+        tap_action:
+          action: toggle
+      - type: picture
+        image: https://images.pexels.com/photos/235975/pexels-photo-235975.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/0/
+  - icon: mdi:hotel
+    title: Bedroom
+    id: bedroom
+    cards:
+      - type: glance
+        title: Phòng ngủ 1
+        entities:
+        - switch.quat_ngu_1
+        - switch.quat_ngu_on_3
+        - media_player.my_echo
+        - light.yeelight_rgb_7c49eb1231a8
+        - light.gateway_light_7c49ebb1b4c9
+        - climate.bed_room_fan
+        - automation.tu_mo_en_yeelight
+        - climate.may_lanh_panasonic
+        - cover.rem_ngoai
+        - cover.rem_trong
+        - fan.bedroom_fan
+        - fan.turn_fan_off
+        - media_player.my_echo
+        tap_action:
+          action: toggle
+      - type: picture
+        image: https://images.pexels.com/photos/235975/pexels-photo-235975.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/0/

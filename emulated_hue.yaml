@@ -11,6 +11,7 @@
     - cover
     - automation
     - cript
+    - group
   entities:
     switch.quat_ngu_1:
       hidden: false
@@ -26,6 +27,125 @@
       hidden: false
     light.bed_room:
       hidden: false
+    automation.fan_power_off:
+      hidden: false
+    group.livingroom_fan:
+      hidden: false
+    automation.tu_mo_den_yeelight:
+      hidden: false
+    group.all_lights:
+      hidden: false
+    light.bed_room:
+      hidden: false
+    light.flux_lamppost:
+      hidden: false
+    light.gateway_light_7c49ebb1b4c9:
+      hidden: false
+    light.led_tv:
+      hidden: false
+    light.porch_strip:
+      hidden: false
+    binary_sensor.switch:
+      hidden: false
+    binary_sensor.switch_158d00026b87e3:
+      hidden: false
+    group.all_switches:
+      hidden: false
+    input_boolean.switch_1_timer_input:
+      hidden: false
+    input_select.switch_2_timer_select:
+      hidden: false
+    switch.bep_1:
+      hidden: false
+    switch.bep_2:
+      hidden: false
+    switch.bep_3:
+      hidden: false
+    switch.cam_bien_mua:
+      hidden: false
+    switch.chuyen_doi_led_tv:
+      hidden: false
+    switch.fan_power:
+      hidden: false
+    switch.fan_speed_1:
+      hidden: false
+    #switch.fan_speed_1_on
+    #switch.fan_speed_2
+    #switch.fan_speed_2_on
+    #switch.fan_speed_3
+    #switch.fan_speed_3_on
+    #switch.fan_speed_4
+    # switch.fan_speed_4_on
+    # switch.fan_speed_5
+    # switch.fan_speed_5_on
+    # switch.fan_speed_6
+    # switch.fan_speed_6_on
+    # switch.fan_speed_7
+    # switch.fan_speed_7_on
+    # switch.fan_speed_8
+    # switch.fan_speed_8_on
+    # switch.fan_speed_9
+    # switch.fan_speed_9_on
+    switch.led_tv:
+      hidden: false
+    switch.may_bom:
+      hidden: false
+    switch.nuoc_cong:
+      hidden: false
+    switch.original_xiaomi_mi_smart_wifi_socket:
+      hidden: false
+    switch.phong_khach_1:
+      hidden: false
+    switch.phong_khach_2:
+      hidden: false
+    switch.phong_khach_3:
+      hidden: false
+    switch.phong_ngu_1:
+      hidden: false
+    switch.phong_ngu_2:
+      hidden: false
+    switch.phong_ngu_3:
+      hidden: false
+    switch.quat_ngu_1:
+      hidden: false
+    switch.quat_ngu_on_3:
+      hidden: false
+    switch.san_1:
+      hidden: false
+    switch.san_2:
+      hidden: false
+    switch.san_3:
+      hidden: false
+    switch.san_thuong_4:
+      hidden: false
+    switch.san_thuong_5:
+      hidden: false
+    switch.san_thuong_6:
+      hidden: false
+    switch.sonoff_1000424f20_1:
+      hidden: false
+    switch.sonoff_1000424f20_2:
+      hidden: false
+    switch.sonoff_1000424f20_3:
+      hidden: false
+    switch.sonoff_1000424f20_4:
+      hidden: false
+    switch.ti_vi:
+      hidden: false
+    switch.ti_vi_chua_dung:
+      hidden: false
+    switch.tuoi_cay:
+      hidden: false
+    switch.tuoi_lan:
+      hidden: false
+    switch.turn_fan_off:
+      hidden: false
+    switch.tv_lg:
+      hidden: false
+    switch.tv_phillips:
+      hidden: false
+    
+    
     # switch.bedroom_light:
       # hidden: false
     # switch.quat_ngu_on_3:

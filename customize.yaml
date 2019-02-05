@@ -1,12 +1,131 @@
-light.yeelight_rgb_7c49eb1231a8:
-  friendly_name: Đèn yeelight
 device_tracker.hostone:
   friendly_name: Note 8
-zone.luong_0c2a836836c34e00aa031fe273bac44d__homefda50693a4e24fb1afcfc6eb0764782510002000:
-  friendly_name: iBeacon
-  icon: mdi:import
 device_tracker.luong_0c2a836836c34e00aa031fe273bac44d:
   friendly_name: luong ?
 device_tracker.luong_note_8:
   friendly_name: luong ??
-
+zone.home:
+  icon: mdi:home
+media_player.les_2nd_reverbai:
+  hidden: true
+media_player.les_alexa_listens:
+  hidden: true
+media_player.les_alexa_swift:
+  hidden: true
+media_player.les_ally:
+  hidden: true
+media_player.les_echosim_beta:
+  hidden: true
+media_player.les_autom8:
+  hidden: true
+media_player.les_alexa_apps:
+  hidden: true
+media_player.les_pfmalexa:
+  hidden: true
+media_player.les_reverbai:
+  hidden: true
+automation.fan_power_on:
+  hidden: true
+automation.fan_power_off:
+  hidden: true
+automation.fan_change_natural:
+  hidden: true
+automation.fan_change_speed:
+  hidden: true
+media_player.les_2nd_alexa_listens:
+  hidden: true
+device_tracker.192168114_040cced4dd0b:
+  hidden: true
+device_tracker.192168114_3095e3b88ba7:
+  hidden: true
+device_tracker.192168118_040cced4dd0b:
+  hidden: true
+switch.fan_speed_1:
+  hidden: true
+switch.fan_speed_2:
+  hidden: true
+switch.fan_speed_3:
+  hidden: true
+switch.fan_speed_4:
+  hidden: true
+switch.fan_speed_5:
+  hidden: true
+switch.fan_speed_6:
+  hidden: true
+switch.fan_speed_7:
+  hidden: true
+switch.fan_speed_8:
+  hidden: true
+switch.fan_speed_9:
+  hidden: true
+switch.fan_speed_1_on:
+  hidden: true
+switch.fan_speed_2_on:
+  hidden: true
+switch.fan_speed_3_on:
+  hidden: true
+switch.fan_speed_4_on:
+  hidden: true
+switch.fan_speed_5_on:
+  hidden: true
+switch.fan_speed_6_on:
+  hidden: true
+switch.fan_speed_7_on:
+  hidden: true
+switch.fan_speed_8_on:
+  hidden: true
+switch.fan_speed_9_on:
+  hidden: true
+automation.time_to_control_on:
+  friendly_name: Time to Control On
+automation.time_to_control_off:
+  friendly_name: Time to Control Off
+sensor.alarm:
+  device_class: pressure
+  friendly_name: Thời gian đã chọn
+device_tracker.192168114_58404ed178e0:
+  hidden: true
+group.sensor: {}
+group.all_automations:
+  hidden: false
+group.all_scripts:
+  hidden: false
+light.gateway_light_7c49ebb1b4c9:
+  friendly_name: Gateway Light
+sensor.humi_soy:
+  friendly_name: Độ ẩm đất
+  unit_of_measurement: '%'
+switch.ti_vi:
+  friendly_name: truyền hình
+cover.rem_trong:
+  friendly_name: RÈM TRONG
+light.bed_room:
+  friendly_name: Đèn ngủ
+switch.quat_ngu_1:
+  friendly_name: QUẠT NGỦ SỐ 1
+switch.quat_ngu_on_3:
+  friendly_name: QUẠT NGỦ
+light.yeelight_rgb_7c49eb1231a8:
+  friendly_name: Đèn yeelight
+binary_sensor.door_window_sensor_158d0002b5b57d:
+  friendly_name: Cửa lên sân thượng
+binary_sensor.door_window_sensor_158d0002b5b494:
+  friendly_name: Cửa cổng
+switch.sonoff_1000424f20_3:
+  friendly_name: Tưới lan
+switch.sonoff_1000424f20_2:
+  friendly_name: 'WC sân sau '
+switch.sonoff_1000424f20_1:
+  friendly_name: 'Kho - WC sân sau '
+switch.bep_1:
+  friendly_name: Đèn vòng trong
+switch.bep_2:
+  friendly_name: Đèn lam
+switch.bep_3:
+  friendly_name: Đèn vòng ngoài
+switch.phong_khach_1:
+  friendly_name: Đèn LED trần
+switch.phong_khach_2:
+  friendly_name: Đèn phòng khách 2
+switch.phong_khach_3:
+  friendly_name: Đèn phòng khách vòng ngoài

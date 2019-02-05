@@ -1,0 +1,17 @@
+#Fan control
+fan_power:
+  name: Ceiling fan #Fan power
+  initial: off
+  icon: mdi:power
+fan_natural:
+  name: Natural mode
+  initial: off
+  icon: mdi:nativescript
+fan_sleep:
+  name: Fan sleep
+  initial: off
+  icon: mdi:fan-off
+switch_1_timer_input:
+  name: Chế độ hẹn giờ thiết bị
+  initial: off
+  icon: mdi:clock-start
