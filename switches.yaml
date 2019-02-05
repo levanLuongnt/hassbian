@@ -1,0 +1,199 @@
+
+  - platform: broadlink
+    host: 192.168.1.2
+    mac: 'b4:43:0d:38:a4:bd'
+  - platform: broadlink
+    host: 192.168.1.2
+    mac: 'b4:43:0d:38:a4:bd'
+    timeout: 15
+    switches:
+      # Will work on most Phillips TVs:
+      tv_phillips:
+        friendly_name: "Phillips Tv Power"
+        command_on: '6QArARYQBAwQDx0EHAUaBRwEGgYaBhoGGgYZBxkHGQcZBwkWCRgHGAcXCRYKFgkVCRYZBxkICewKFgkXGAcZBxkIFwgYCBgIGAgYCBcKFgoWCxSqBFwEPPIHGQYaFgoVCxULFgsVCxQLFQsVCxULFQsVCxULBhkFGgYaBRkGGgcXBxkGGRYKFwkG7wgYBxgYCBcKFgoWCRcJGQcZBxgKFggYCBcKFgoGGQcYBxoFGAgYBxgHGAcYFwkZBwjuCRYJFhkIGQcZBxgIGQcYCBgIGAgYCBgIGAgYCAgXCBgHGAgYBxcIFwgYCBcYCBgJB+4KFQkXGAgYCBgIGAgYCBgJFwgYCBgIGAgYCBkHCRcIFwgXCBcKFggXCBcJFhkHGQkG7wkXCBYZBxkHGQgFAAXcAAAAAAAAAAAAAAAAAA=='
+        command_off: '6QBHAQ8THAQbBxkFHAQcBBoGGgYZBxoGGQcZBxgICRYIFxgJFwgIFwkXBxcIGAcYBxgH7gkWCBcYCBgIGAgXChYJFwkWCxYLEBVcBBsEHxAOFAsEHAQbBhkFGwQbBQABDggXBxkWCRcJGAgWChYKFgoWCxUKFgoWChUOEwkIFwcYFwoWCQgYBhoFGQcYBhoFGQfuCBcIGBcIGAgYChYIGAoXBxgIGAkWCxUJFwkXCQcYBxgXCRcJBxgIFwgXCBgHGAcYCO0JFgkWGQgYCBgHGQcYCBgKFggZBxgJFwkXCBgICBcIFxgIGAgIGQcWCBkHFwgXChUI7ggXCRYZBxkJFwcYCBkHGAgaBhgIGAgYCBgIGAgIGAgWGgYZBwgXCBcIGAcYCBcJFgjvCBYJFhkHGQcZBxkIGAcYCBgIGAkXCBgIGAgZBwgXCQAF3AA='
+      # Will work on most LG TVs
+      tv_lg:
+        friendly_name: "LG Tv Power"
+        command_on: 'JgBYAAABIJISExETETcSEhISEhQQFBETETcROBESEjcRNhM1EjcTNRMTERISNxEUERMSExE2EjYSNhM2EhIROBE3ETcREhITEgAFGwABH0oSAAwzAAEfShEADQU='
+        command_off: 'JgBYAAABIJISExETETcSEhISEhQQFBETETcROBESEjcRNhM1EjcTNRMTERISNxEUERMSExE2EjYSNhM2EhIROBE3ETcREhITEgAFGwABH0oSAAwzAAEfShEADQU='
+      quat_ngu_on_3:
+        friendly_name: "TẮT VÀ MỞ QUẠT NGỦ SÔ 3"
+        command_on: '6QAoAwQEBAQQDgQEDxAdBBsFGwUbBRsGGgYaBhoHGQcZCBgHGQcJFgkXCRYKFQoWCRYKFgkXGQYZCQfvChUJGBgIGAcaBhkHGQgYCBoGGAkXCRkIGAgWDAQbBBsFGwUaBBwEGwQcBBwKAAEtBhkGGhUNFAsVCxYKFQwWChULFQwUCxULFgsVCwUbBBoGGgUaBhkGGwUZBhkXChYKBvEIFwkYFwgXChcJFwkXChYJGQgXCRcJFwkXChcJBxkHGAcYBxgIGAgXCBgHGBcJGAgI8QgXCBgXCBgJGAgYCBgJFwkZBxgIGAkXCRgIGAkHGAcYCBgHGAgXChYIFwgXGQgYCAjxCBYJFxkHGQgYCBgIGQkXCBgIGAgYCBkIGAgYCAgYCBcJGAcXCBgIFwgXCRcYCBkHCPEJFwgWGwYZBxkHGQgYCBkHGgcZBxgJGAgZBxoGCBgIFwgZBxcIFwkXCBcJFxgJFwgI8AoWChUaBxkHGQcZCBgIGQgYCBgIGAgaBxkIFwgIGQcXCRcIGAcXCRcIFwoWGAgZBwnxCRYIGBkGGQcZCBoGGQcaBxgIGQcaBxgIGQkXBwkXChUJGAcXChcHFwkXCBcZCBgICPAKFgkXGQcZBxkHGQkZBhkHGQgYCBkHGQgYCBkHCRgHFwkXCRYJFwgXCRcIGBgJFwgI8AoXCBcaBhkIGAgYCBkIGAcZCBkHGQcZCBgJGQcIFwoVCRcJFgoWCBgJFgkWGwYZBwrvCRYKFhkHGQcaBxkIGQcZBxkHGQgYCBoHGAgZBwkWCRcJFgkXCBcJFwoVCRcaBxgICPEJFwkVGwcYBxkHGwYaBhkHGQgZBxkIGAgZCRcICRYJFwgXCRcIFwkXCBgIGBgHGQkH8AoWCRYaBxkHGgcYCRkGGQcZCBkHBBAGBxgIGQcZCAgXCRcIFwkXCBcJFwkYBxcZBxkICPAKFwkWGQcZBxkJGAcZCBoHGAcaBhkJGAcaBxgICBgIFwoWCBgIFwkXCBgHFxkIGAgI8goUChYZBxoIGAkXBxoHGQgaBhgIGgcYCBgIGgcIGAcZBxcJFwgYCBcJFgoWGQcZCAgABdw='
+        command_off: '6QsyABoIGQgZCBoIGQgZCBoIGQkZCQkXCRgZCBkICBgJGAkYCRgJGAkYCfAJFwkWGggZCBoHAAAAAAAA'
+      quat_ngu_1:
+        friendly_name: " MỞ QUẠT NGỦ SỐ 1"
+        command_on: '6QsyAAkYCBgJFxoHGggJFwoXCRgJFwnuChYKFhoHGggaCBoHGggZCBoHGQgaCBkIGQkZCQkXAAAAAAAA'
+      tuoi_lan:
+        friendly_name: "Tưới Lan"
+        command_on: '1wCoAgQTBBMUBBMLCguwBBINCRUMCgwLDAkUDB4OCBUEEQQSBBIEEgQSBBIEEgQRBBEEEgQRDgkMCQSiBBEOCAQSDQkNCA8GBBEPCAQQDwcEFBMEEQQRBBEEEQQRBBAFEAUQBREFDhEFDwgEowQQEAYFEA8GEAYPBwUPEAcEEA8HBBEFDwUQBRAGDwUQBREEDwUQBRAFDwcOEAcPBgWiBQ8RBAYPEQcOBw8GBRAQBwQPEQUFEAYOBhAFDwUQBREEDwYQBQ8GDwUPBhAQBRAGBqAHDhEFBg8QBREFEQUFEBAFBg8QBgUQBg4IDQYPBg8GDwYOBhAFDwYPBg8GDhEFEAYGoAcOEQUGDxEEEgYPBQYPEQQHDhEFBhAFDwUQBw0GDwcOBhAFDgcOBw4GEAUPEQYPBQefBw4SBAYQEAUQBRIEBg8QBwQPEQUGDwURBBAFDwYPBhAFDwcOBg8HDgYOBg8QBhAFBqIGDhEEBw4RBRIEEQQGEA8HBQ4RBQYPBg8GDwYOBg8GEQQPBg8GDggNBw4HDhIEEQQGoQgMEgQIDREFEQQRBgYOEQUHDhAFBg8GEAUPBg8GDggNBw8GDgYPBhAFDwYPEAURBQahBg4RBQYPEAURBRAHBg0RBQcOEQUGDgcOBg8IDQYPBhAFDwYPBg4HDgcOBw8QBRAFBqEGDhIEBg4SBBEFEgUFDxAGBg4SBAYPBg8GDgcOBg8HDgcNBw4HDgcOBw4HDRIEEQUGoAgOEgQHDhEFEgQRBQcOEQUGDxAFBg8GDwYPBg4HDgcOBw4HDgYOBw4HDgcOEQQRBgWhBw0SBQcNEgQSBBEFBg8RBgUQDwYFEAYOBg8GDgcOBw4HDgYQBg4GEAUPBg4SBBEAA5YrBhEFBAcQCAoEBBIEBgQEHAczBAUEAAXc='
+        command_off: '1wCXARIECA8SBAYPEQUHDwkNCA8HDwgPCA8HEAcPEQQSBAgPBw8JDgkNCp4JDhIECA8RBBIEEgQIDxIECA8QBAcQBw8IDggPCQ0IEAcPCA8QBRAEBxAHDwcRBg8JnwkOEQQJDhIEEQQRBAgPEQQIDxIEBw8IDwcPCQ4HDwgPCQ0IDxEEEQQIDwkOBxEGDwmfCgwTDA4QBBEFDwUHDxEFBhEQBAgPCA4IDwgPBw8IEAYPCA4SBBEECA8HDwgPCA4KngkOEgQKDBIEEwQRBAgPEgQIEBAEBxAHDwcQBxAHEAYRBhAHDxEEEQUHDwcPCA4JDgigCQ0UCg4SBBIEEQQHEBIECA8RBAgQBw8HDwgPCA4IDwgPCQ0RBBEECA8IDwgOCA8InwoNEwwOEhMFEAQIDxIECQ8RBAgQBw4IDwkNCQ8HDwcPCA8RBBIECBAIDwYPCA4JoAoMEwsNEgQRBQ8ECA8RBAgPEAQIDggQBw8HDwkNCQ8HDwkOEQQRBAkOBw8IDwcAA/cEBAUFBAgEBAQEFQQFCQwzBAkGAAXcAA=='
+      nuoc_cong:
+        friendly_name: "Nước Cổng"
+        command_on: '1ws0ABodCAwaHQkLGh0JCxscCR0JHAocCQsbCxoLGgsaDBoMGgsAAQweCR0IDBodCQsaHQgMGgwAAAAA='
+        command_off: '1wo0AAwaCxsLGgwaHAocCRwKCxsLGh0JDBkcChsKHAkcChwKCgABDR4JHQkdCQsaHAkdCgobCxoAAAAA'
+  - platform: mqtt
+    name: "Cảm Biến Mưa"
+    state_topic: "stat/san.thuong/POWER1"
+    command_topic: "cmnd/san.thuong/POWER1"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1 
+  - platform: mqtt
+    name: "Tưới cây"
+    state_topic: "stat/san.thuong/POWER2"
+    command_topic: "cmnd/san.thuong/POWER2"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1  
+  - platform: mqtt
+    name: "Máy Bơm"
+    state_topic: "stat/san.thuong/POWER3"
+    command_topic: "cmnd/san.thuong/POWER3"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1    
+  - platform: mqtt
+    name: "Sân Thượng 4"
+    state_topic: "stat/san.thuong/POWER4"
+    command_topic: "cmnd/san.thuong/POWER4"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1
+  - platform: mqtt
+    name: "Sân Thượng 5"
+    state_topic: "stat/san.thuong/POWER5"
+    command_topic: "cmnd/san.thuong/POWER5"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1    
+  - platform: mqtt
+    name: "Sân Thượng 6"
+    state_topic: "stat/san.thuong/POWER6"
+    command_topic: "cmnd/san.thuong/POWER6"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1    
+  - platform: mqtt
+    name: "LED TV"
+    state_topic: "stat/tv/POWER1"
+    command_topic: "cmnd/tv/POWER1"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1 
+  - platform: mqtt
+    name: "Ti Vi"
+    state_topic: "stat/tv/POWER2"
+    command_topic: "cmnd/tv/POWER2"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1  
+  - platform: mqtt
+    name: "Chuyển đổi LED TV"
+    state_topic: "stat/tv/POWER3"
+    command_topic: "cmnd/tv/POWER3"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1    
+  - platform: mqtt
+    name: "Ti Vi chưa dùng"
+    state_topic: "stat/tv/POWER4"
+    command_topic: "cmnd/tv/POWER4"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1       
+  - platform: mqtt
+    name: "Sân 1"
+    state_topic: "stat/san.truoc/POWER1"
+    command_topic: "cmnd/san.truoc/POWER1"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1 
+  - platform: mqtt
+    name: "Sân 2"
+    state_topic: "stat/san.truoc/POWER2"
+    command_topic: "cmnd/san.truoc/POWER2"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1  
+  - platform: mqtt
+    name: "Sân 3"
+    state_topic: "stat/san.truoc/POWER3"
+    command_topic: "cmnd/san.truoc/POWER3"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1    
+  - platform: mqtt
+    name: "Phòng Khách 1"
+    state_topic: "stat/phong.khach/POWER1"
+    command_topic: "cmnd/phong.khach/POWER1"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1 
+  - platform: mqtt
+    name: "Phòng Khách 2"
+    state_topic: "stat/phong.khach/POWER2"
+    command_topic: "cmnd/phong.khach/POWER2"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1  
+  - platform: mqtt
+    name: "Phòng Khách 3"
+    state_topic: "stat/phong.khach/POWER3"
+    command_topic: "cmnd/phong.khach/POWER3"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1
+  - platform: mqtt
+    name: "Bếp 1"
+    state_topic: "stat/bep/POWER1"
+    command_topic: "cmnd/bep/POWER1"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1 
+  - platform: mqtt
+    name: "Bếp 2"
+    state_topic: "stat/bep/POWER2"
+    command_topic: "cmnd/bep/POWER2"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1  
+  - platform: mqtt
+    name: "Bếp 3"
+    state_topic: "stat/bep/POWER3"
+    command_topic: "cmnd/bep/POWER3"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1
+  - platform: mqtt
+    name: "Phòng ngủ 1"
+    state_topic: "stat/phong.ngu/POWER1"
+    command_topic: "cmnd/phong.ngu/POWER1"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1 
+  - platform: mqtt
+    name: "Phòng ngủ 2"
+    state_topic: "stat/phong.ngu/POWER2"
+    command_topic: "cmnd/phong.ngu/POWER2"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1  
+  - platform: mqtt
+    name: "Phòng ngủ 3"
+    state_topic: "stat/phong.ngu/POWER3"
+    command_topic: "cmnd/phong.ngu/POWER3"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1
+  - platform: mqtt
+    name: "Turn fan off"
+    command_topic: "ha/fanoff"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1
+  - platform: xiaomi_miio
+    name: Original Xiaomi Mi Smart WiFi Socket
+    host: 192.168.1.8
+    token: 605ca0accbfdf93801cf8a5a8b76b4eb
+    model: chuangmi.plug.m1    
